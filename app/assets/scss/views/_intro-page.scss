@@ -1,4 +1,51 @@
 .intro-page {
   background-image: url('../img/intro-background.png');
+  background-repeat: no-repeat;
+  background-position: center; 
+  background-size: cover;
   height: 100vh;
+  padding: 0 20%;
 }
+
+.intro-page__additional-background {
+  background-image: url('../img/intro-background-lines.png');
+  background-repeat: no-repeat;
+  background-position: bottom center; 
+  background-size: contain;
+  height: inherit;
+   @include r(phone-max) {
+    background-image: none;
+  }
+}
+
+.intro-page__content {
+  height: inherit;
+  h1 {
+    font-family: 'Raleway-ExtraBoldItalic';
+    font-size: 4.5rem;
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  p {
+    font-size: 2rem;
+    color: white;
+    text-align: center;
+    span {
+      color: $green;
+    }
+  }
+  & > div {
+    flex: 1;
+  }
+}
+
+.content__logo-container {
+  text-align: center;
+  padding-top: 30px;
+}
+
+.content__copy-container {
+  padding-top: 30px;
+}
+
