@@ -1,5 +1,63 @@
 .main-page {
+  min-height: 100vh;
+  min-width: 310px;
   background-image: url('../img/main-background.png');
+  background-repeat: no-repeat;
+  background-position: center; 
+  background-size: cover;
+}
+
+.main-page__content {
+  min-height: inherit;
+  padding: 0 20%;
+  h1 {
+    font-family: 'Raleway-Black';
+    font-size: 4.8rem;
+    color: $green;
+    text-transform: uppercase;
+    text-align: center;
+  }
+}
+
+.t-shirts__piece-container {
+  position: relative;
+  .t-shirts__piece {
+    min-width: 248px;
+    padding-top: 20px;
+  }
+  .t-shirts__design {
+    position: absolute;
+    width: 47%;
+    top: 85px;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+}
+
+.hr {
+  width: 145px;
+  background: $green;
+  display: block;
+  height: 2px;
+  border: 0;
+  margin: 10px 0 0 0;
+}
+
+.t-shirts__copy {
+  h2 {
+    font-family: 'Raleway-Medium';
+    font-size: 2rem;
+    color: white;
+    margin: 3px 0 0 0;
+  }
+  p {
+    font-family: 'Raleway-Light';
+    font-size: 1.2rem;
+    color: #888888;
+    margin: 0;
+    text-align: center;
+  }
 }
 
 footer {
