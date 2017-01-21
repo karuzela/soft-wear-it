@@ -9,6 +9,7 @@
 
 .main-page__content {
   min-height: inherit;
+  min-width: inherit;
   padding: 0 20%;
   h1 {
     font-family: 'Raleway-Black';
@@ -19,6 +20,14 @@
   }
 }
 
+.main-page__header {
+  padding: 60px 0;
+}
+
+.t-shirts__container {
+  padding-bottom: 40px;
+}
+
 .t-shirts__piece-container {
   position: relative;
   .t-shirts__piece {
@@ -27,7 +36,7 @@
   }
   .t-shirts__design {
     position: absolute;
-    width: 47%;
+    width: 46%;
     top: 85px;
     left: 0;
     right: 0;
@@ -58,6 +67,67 @@
     margin: 0;
     text-align: center;
   }
+}
+
+.designers__container {
+  padding: 0 5%;
+  @include r(phone-max) {
+    flex-wrap: wrap;
+  }
+  h3 {
+    font-family: 'Raleway-Thin';
+    font-size: 4rem;
+    color: #e6e6e6;
+    line-height: 35px;
+  }
+  p {
+    font-family: 'Raleway-Light';
+    font-size: 1.3rem;
+    color: #e6e6e6;
+  }
+  .hr {
+    width: 50px;
+    height: 1px;
+  }
+  img {
+    min-width: 170px;
+    @include r(phone-max) {
+      max-width: 120px;
+      min-width: 100px;
+    }
+  }
+}
+
+.designers__kula {
+  margin-right: 30px !important;
+  @include r(phone-max) {
+    flex-wrap: wrap;
+  }
+  img {
+    margin-right: 20px;
+  }
+}
+
+.designers__miskacz {
+  margin-top: 0 !important;
+  @include r(phone-max) {
+    margin-top: 50px !important;
+    flex-wrap: wrap;
+  }
+  p {
+    margin-right: 20px;
+  }
+}
+
+.kula__copy,
+.kula__photo,
+.miskacz__copy,
+.miskacz__photo {
+  flex: 1;
+}
+
+.miskacz__photo {
+  text-align: right;
 }
 
 footer {

@@ -27,6 +27,9 @@
     color: white;
     text-align: center;
     text-transform: uppercase;
+    @include r(phone-max) {
+      font-size: 3.5rem;
+    }
   }
   p {
     font-family: 'Raleway-ExtraBoldItalic';
@@ -34,6 +37,9 @@
     color: white;
     text-align: center;
     text-transform: uppercase;
+    @include r(phone-max) {
+      font-size: 1.5rem;
+    }
     span {
       color: $green;
     }
@@ -57,7 +63,6 @@
 
 .content__instructions-container {
   display: none;
-  position: relative;
   @include r(phone-max) {
     display: flex;
     flex-direction: column;
@@ -65,14 +70,16 @@
     align-items: center;
     align-content: center;
   }
-  .content__instruction1,
-  .content__instruction2,
-  .content__instruction3 {
+  .content__instruction {
+    position: relative;
     p {
       font-family: 'Raleway-Black';
       font-size: 2.8rem;
       color: $green; 
       padding-top: 30px;
+      @include r(phone-max) {
+        font-size: 1.8rem;
+      }
     }
     .instruction__number {
       position: absolute;
@@ -89,26 +96,12 @@
       margin: 0 auto;
       left: -390px;
       right: 0;
+      top: 25px;
       span {
         font-family: 'Raleway-Black';
         font-size: 2.3rem;
         color: #1a1a1a;
       }
-    }
-  }
-  .content__instruction1 {
-    .instruction__number {
-      top: 64px;
-    }
-  }
-  .content__instruction2 {
-    .instruction__number {
-      top: 132px;
-    }
-  }
-  .content__instruction3 {
-    .instruction__number {
-      top: 208px;
     }
   }
 }
