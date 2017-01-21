@@ -5,15 +5,16 @@
   background-size: cover;
   height: 100vh;
   padding: 0 20%;
+  min-width: 310px;
 }
 
 .intro-page__additional-background {
-  background-image: url('../img/intro-background-lines.png');
+  background-image: url('../img/intro-instruction-background.png');
   background-repeat: no-repeat;
   background-position: bottom center; 
   background-size: contain;
   height: inherit;
-   @include r(phone-max) {
+  @include r(phone-max) {
     background-image: none;
   }
 }
@@ -28,9 +29,11 @@
     text-transform: uppercase;
   }
   p {
+    font-family: 'Raleway-ExtraBoldItalic';
     font-size: 2rem;
     color: white;
     text-align: center;
+    text-transform: uppercase;
     span {
       color: $green;
     }
@@ -46,6 +49,66 @@
 }
 
 .content__copy-container {
-  padding-top: 30px;
+  margin-top: -60px;
+  @include r(phone-max) {
+    margin-top: 80px;
+  }
 }
 
+.content__instructions-container {
+  display: none;
+  position: relative;
+  @include r(phone-max) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+  }
+  .content__instruction1,
+  .content__instruction2,
+  .content__instruction3 {
+    p {
+      font-family: 'Raleway-Black';
+      font-size: 2.8rem;
+      color: $green; 
+      padding-top: 30px;
+    }
+    .instruction__number {
+      position: absolute;
+      border-radius: 50%;
+      background: white;
+      border: 2px solid #1a1a1a;
+      display: inline-block;
+      width: 30px;
+      height: 0;
+      padding: 15px 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto;
+      left: -390px;
+      right: 0;
+      span {
+        font-family: 'Raleway-Black';
+        font-size: 2.3rem;
+        color: #1a1a1a;
+      }
+    }
+  }
+  .content__instruction1 {
+    .instruction__number {
+      top: 64px;
+    }
+  }
+  .content__instruction2 {
+    .instruction__number {
+      top: 132px;
+    }
+  }
+  .content__instruction3 {
+    .instruction__number {
+      top: 208px;
+    }
+  }
+}
