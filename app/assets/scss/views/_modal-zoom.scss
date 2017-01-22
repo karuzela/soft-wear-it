@@ -1,0 +1,17 @@
+.modal-zoom__container {
+  padding: 25px;
+}
+
+.modal-zoom {
+  position: relative;
+  max-width: 600px;
+  min-width: 230px;
+  outline: none;
+}
+
+.button-close-zoom {
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  cursor: pointer;
+}

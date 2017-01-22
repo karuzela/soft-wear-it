@@ -79,11 +79,53 @@
 
         <div class="t-shirts__piece-container uk-flex uk-flex-center uk-flex-column uk-flex-middle">
         <!-- modal with design zoom -->
-          <div id="pizza-master-design" class="uk-modal" uk-modal>
-            <div class="uk-modal-dialog uk-modal-body">
-              <h2 class="uk-modal-title">tytul</h2>
+          <div id="pizza-master-design" class="uk-modal modal-zoom__container" uk-modal>
+            <div class="uk-modal-dialog uk-modal-body modal-zoom">
               <img src="./assets/img/3.jpg"/>
-               <button class="uk-modal-close" type="button" uk-close>close</button>
+              <img src="./assets/img/button-close.png" class="button-close-zoom"/>
+            </div>
+          </div>
+      <!-- modal with t-shirt selection -->
+          <div id="pizza-master-modal" class="uk-modal" uk-modal>
+            <div class="uk-modal-dialog uk-modal-body modal-choose-tshirt">
+              <div class="uk-grid">
+                <div class="uk-width-medium-1-2 uk-width-1-1">
+                  <div class="t-shirt__single">
+                    <div class="t-shirt__white--modal uk-flex uk-flex-middle uk-flex-center">
+                      <div class="t-shirt__design--modal">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="modal-form-container uk-width-medium-1-2 uk-width-1-1">
+                  <h1 class="modal-header">Pizza Master</h1>
+                  <h2 class="design-by">Design by Miskacz</h2>
+                  <form>
+                    <div class="modal-form__field">
+                      <select name="tshirt-size" form="tshirt-size">
+                        <option value="S">Wybierz rozmiar S</option>
+                        <option value="M">Wybierz rozmiar M</option>
+                        <option value="L">Wybierz rozmiar L</option>
+                        <option value="XL">Wybierz rozmiar XL</option>
+                      </select> 
+                    </div>
+                    <div class="modal-form__field">
+                      <input type="email" pattern="[^ @]*@[^ @]*" placeholder="Podaj email"/>
+                    </div>
+                    <div class="modal-form__field">
+                      <input type="file" id="uploadCV-pizza-master"/>
+                      <label id="label__uploadCV-pizza-master" for="uploadCV-pizza-master">Załącz CV</label>
+                    </div>
+                    <div class="modal-form__field">
+                      <button class="modal__button">Wyślij</button>
+                    </div>
+                    <div class="modal-form__field">
+                      <input type="checkbox" id="checkbox-pizza-master" name="agreement" />
+                      <label for="checkbox-pizza-master">Lorem ipsum</label>
+                    </div>
+                  </form>
+                </div>
+              </div>
             </div>
           </div>
           <div class="t-shirt__single">
@@ -92,52 +134,9 @@
             <div class="t-shirts__button">
               <a href="#pizza-master-modal" data-uk-modal="target: #pizza-master-modal" id="pizza-master-button"><span>wybieram</span>
               </a>
-              <!-- modal with t-shirt selection -->
-              <div id="pizza-master-modal" class="uk-modal" uk-modal>
-                <div class="uk-modal-dialog uk-modal-body modal-choose-tshirt">
-                  <div class="uk-grid">
-                    <div class="uk-width-medium-1-2 uk-width-1-1">
-                      <div class="t-shirt__single">
-                        <div class="t-shirt__white--modal uk-flex uk-flex-middle uk-flex-center">
-                          <div class="t-shirt__design--modal">
-                            <a href="pizza-master-design" data-uk-modal="target: #pizza-master-design" id="pizza-master-show" class="t-shirts__design">
-                              <img src="./assets/img/zoom-button.png"/>
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="modal-form-container uk-width-medium-1-2 uk-width-1-1">
-                      <h1 class="modal-header">Pizza Master</h1>
-                      <h2 class="design-by">Design by Miskacz</h2>
-                      <form>
-                        <div class="modal-form__field">
-                          <select name="tshirt-size" form="tshirt-size">
-                            <option value="S">Wybierz rozmiar S</option>
-                            <option value="M">Wybierz rozmiar M</option>
-                            <option value="L">Wybierz rozmiar L</option>
-                            <option value="XL">Wybierz rozmiar XL</option>
-                          </select> 
-                        </div>
-                        <div class="modal-form__field">
-                          <input type="email" pattern="[^ @]*@[^ @]*" placeholder="Podaj email"/>
-                        </div>
-                        <div class="modal-form__field">
-                          <input type="file" id="uploadCV-pizza-master"/>
-                          <label id="label__uploadCV-pizza-master" for="uploadCV-pizza-master">Załącz CV</label>
-                        </div>
-                        <div class="modal-form__field">
-                          <button class="modal__button">Wyślij</button>
-                        </div>
-                        <div class="modal-form__field">
-                          <input type="checkbox" id="checkbox-pizza-master" name="agreement" />
-                          <label for="checkbox-pizza-master">Lorem ipsum</label>
-                        </div>
-                      </form>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <a href="pizza-master-design" data-uk-modal="target: #pizza-master-design" id="pizza-master-show" class="zoom-icon">
+                <img src="./assets/img/zoom-button.png"/>
+              </a>
             </div>
           </div>
           <hr class="hr">

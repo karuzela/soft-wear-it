@@ -10,7 +10,10 @@ $(document).ready(function() {
   $("#pizza-master-show").on("click", function() {
     UIkit.modal("#pizza-master-design", {center:true}).show();
   })
-  
+
+  $(".button-close-zoom").on("click", function() {
+    UIkit.modal("#pizza-master-design").hide();
+  })
 });
 
 function selectTshirt () {

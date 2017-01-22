@@ -40,11 +40,17 @@
   .t-shirts__design {
     position: absolute;
     width: 46%;
-    top: 85px;
+    top: 100px;
     left: 0;
     right: 0;
     margin: auto;
   }
+}
+
+.zoom-icon {
+  position: absolute;
+  top: -295px;
+  right: -60px;
 }
 
 .t-shirts__button {
