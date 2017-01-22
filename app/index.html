@@ -4,11 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" href="./assets/css/main.css">
   <link rel="stylesheet" href="./assets/css/uikit.min.css" />
-  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.4/css/selectize.default.css"/>
+  <link rel="stylesheet" href="./assets/css/main.css"/>
   <script src="./assets/scripts/jquery.js"></script>
   <script src="./assets/scripts/uikit.min.js"></script>
+  <script src="https://use.fontawesome.com/e126d2c437.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.4/js/standalone/selectize.min.js"></script>
   <script src="./assets/scripts/app.js"></script>
   <title>Soft Wear It</title>
   <meta name="keywords" content="t-shirts, geek, zabawne koszulki, design, branża IT">
@@ -93,7 +95,7 @@
               <!-- modal with t-shirt selection -->
               <div id="pizza-master-modal" class="uk-modal" uk-modal>
                 <div class="uk-modal-dialog uk-modal-body modal-choose-tshirt">
-                  <div class="uk-grid uk-grid-collapse">
+                  <div class="uk-grid">
                     <div class="uk-width-medium-1-2 uk-width-1-1">
                       <div class="t-shirt__single">
                         <div class="t-shirt__white--modal uk-flex uk-flex-middle uk-flex-center">
@@ -109,7 +111,7 @@
                       <h1 class="modal-header">Pizza Master</h1>
                       <h2 class="design-by">Design by Miskacz</h2>
                       <form>
-                        <div>
+                        <div class="modal-form__field">
                           <select name="tshirt-size" form="tshirt-size">
                             <option value="S">Wybierz rozmiar S</option>
                             <option value="M">Wybierz rozmiar M</option>
@@ -117,9 +119,19 @@
                             <option value="XL">Wybierz rozmiar XL</option>
                           </select> 
                         </div>
-                        <div>
-                          <input type="email" pattern="[^ @]*@[^ @]*" value="email" placeholder="Podaj email">
-                          </input>
+                        <div class="modal-form__field">
+                          <input type="email" pattern="[^ @]*@[^ @]*" placeholder="Podaj email"/>
+                        </div>
+                        <div class="modal-form__field">
+                          <input type="file" id="uploadCV-pizza-master"/>
+                          <label id="label__uploadCV-pizza-master" for="uploadCV-pizza-master">Załącz CV</label>
+                        </div>
+                        <div class="modal-form__field">
+                          <button class="modal__button">Wyślij</button>
+                        </div>
+                        <div class="modal-form__field">
+                          <input type="checkbox" id="checkbox-pizza-master" name="agreement" />
+                          <label for="checkbox-pizza-master">Lorem ipsum</label>
                         </div>
                       </form>
                     </div>

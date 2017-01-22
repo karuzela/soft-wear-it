@@ -1,4 +1,6 @@
-$( document ).ready(function() {
+$(document).ready(function() {
+  $('select').selectize();
+
   selectTshirt();
 
   $("#pizza-master-button").on("click", function() {

@@ -3,11 +3,11 @@
   background-repeat: no-repeat;
   background-position: center; 
   background-size: cover !important;
-  height: 70%;
+  min-height: 70%;
   width: 80% !important;
   min-width: 320px;
   @include r(phone-max) {
-    height: 80%;
+    min-height: 80%;
     width: 60% !important;
     padding: 20px 40px;
   }
@@ -19,7 +19,6 @@
 
 .t-shirts__button {
   .t-shirt__single {
-    margin-top: 40px;
     .t-shirt__white--modal {
       background-image: url('../img/tshirt.png') !important;
       background-repeat: no-repeat;

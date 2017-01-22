@@ -1,0 +1,133 @@
+.modal-form__field {
+  padding: 8px 0;
+}
+
+input[type="email"],
+.selectize-input,
+.selectize-dropdown-content,
+.selectize-input .option,
+[id^=label__uploadCV-] {
+  font-family: 'Raleway-Light' !important;
+  font-size: 1.4rem !important;
+  color: $grey !important;
+  background: transparent !important;
+  border: 2px solid $green !important;
+  padding: 8px 10px !important;
+  min-width: 180px !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+input[type="email"] {
+  padding: 10px 10px !important;
+}
+
+::-webkit-input-placeholder {
+  $grey: !important;
+  opacity: 1 !important;
+  background: transparent !important;
+}
+
+:-moz-placeholder {
+  $grey: !important;  
+  opacity: 1 !important;
+  background: transparent !important;
+}
+
+::-moz-placeholder {
+  $grey: !important; 
+  opacity: 1 !important;
+  background: transparent !important; 
+}
+
+:-ms-input-placeholder {  
+  $grey: !important;  
+  opacity: 1 !important;
+  background: transparent !important;
+}
+
+.selectize-dropdown-content {
+  padding: 0 !important;
+}
+
+.selectize-dropdown {
+  background: #2b2b2b !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  .active {
+    background: $green !important;
+    color: white !important;
+  }
+}
+
+.selectize-control {
+  height: 35px !important;
+}
+
+.selectize-dropdown.single {
+  border: 0 !important;
+}
+
+// .selectize-input.dropdown-active.focus {
+//   border: 2px solid $green !important;
+//   box-shadow: none !important;
+// }
+
+.selectize-input {
+  width: 203px !important;
+  &:after {
+    border-color: $green transparent transparent transparent !important;
+  }
+}
+
+.modal__button {
+  font-family: 'Raleway-Bold';
+  font-size: 2rem;
+  color: $grey;
+  background: $green;
+  padding: 10px;
+  min-width: 203px;
+  outline: none;
+  text-transform: uppercase;
+  border: 0;
+  cursor: pointer;
+}
+
+input[type=checkbox] { 
+  display:none; 
+} 
+
+input[type=checkbox] + label {
+  font-family: 'Raleway-Light';
+  font-size: 1.4rem;
+  color: $grey;
+}
+
+input[type=checkbox] + label:before {
+  font-family: FontAwesome;
+  display: inline-block;
+}
+
+input[type=checkbox] + label:before { 
+  content: "\f096"; 
+  letter-spacing: 15px;
+  color: white;
+}
+
+input[type=checkbox]:checked + label:before { 
+  content: "\f046"; 
+  letter-spacing: 13px; 
+  color: white;
+}
+
+[id^=uploadCV-] {
+  display: none;
+}
+
+[id^=label__uploadCV-] {
+  cursor: pointer;
+  display: block;
+  width: 180px;
+}
+

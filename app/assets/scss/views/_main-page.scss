@@ -48,7 +48,7 @@
 }
 
 .t-shirts__button {
-  // visibility: hidden;
+  display: none;
   position: absolute;
   top: 335px;
   left: 105px;
@@ -65,7 +65,7 @@
 }
 
 .t-shirts__button.active {
-  visibility: visible;
+  display: block;
 }
 
 .hr {
