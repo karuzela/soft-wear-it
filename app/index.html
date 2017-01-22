@@ -6,8 +6,10 @@
   <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="./assets/css/main.css">
   <link rel="stylesheet" href="./assets/css/uikit.min.css" />
-  <script src="js/jquery.js"></script>
-  <script src="js/uikit.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+  <script src="./assets/scripts/jquery.js"></script>
+  <script src="./assets/scripts/uikit.min.js"></script>
+  <script src="./assets/scripts/app.js"></script>
   <title>Soft Wear It</title>
   <meta name="keywords" content="t-shirts, geek, zabawne koszulki, design, branża IT">
   <meta name="description" content="Szukasz wyjątkowego stylu? Prześlij nam swoje CV i odbierz wyjątkowy t-shirt">
@@ -57,114 +59,232 @@
         <h1>wybierz koszulkę</h1>
       </div>
       <div class="t-shirts__container uk-flex uk-flex-center uk-flex-wrap">
+
         <div class="t-shirts__piece-container uk-flex uk-flex-center uk-flex-column uk-flex-middle">
-          <img src="./assets/img/tshirt.png" class="t-shirts__piece"/>
-          <img src="./assets/img/1.jpg" class="t-shirts__design"/>
+          <div class="t-shirt__single">
+            <img src="./assets/img/tshirt.png" class="t-shirts__piece"/>
+            <img src="./assets/img/1.jpg" class="t-shirts__design"/>
+            <div class="t-shirts__button">
+              <span>wybieram</span>
+            </div>
+          </div>
           <hr class="hr">
           <div class="t-shirts__copy">
             <h2>Spaghetti Code</h2>
             <p>Design by Miskacz</p>
           </div>
         </div>
+
         <div class="t-shirts__piece-container uk-flex uk-flex-center uk-flex-column uk-flex-middle">
-          <img src="./assets/img/tshirt.png" class="t-shirts__piece"/>
-          <img src="./assets/img/3.jpg" class="t-shirts__design"/>
+        <!-- modal with design zoom -->
+          <div id="pizza-master-design" class="uk-modal" uk-modal>
+            <div class="uk-modal-dialog uk-modal-body">
+              <h2 class="uk-modal-title">tytul</h2>
+              <img src="./assets/img/3.jpg"/>
+               <button class="uk-modal-close" type="button" uk-close>close</button>
+            </div>
+          </div>
+          <div class="t-shirt__single">
+            <img src="./assets/img/tshirt.png" class="t-shirts__piece"/>
+            <img src="./assets/img/3.jpg" class="t-shirts__design"/>
+            <div class="t-shirts__button">
+              <a href="#pizza-master-modal" data-uk-modal="target: #pizza-master-modal" id="pizza-master-button"><span>wybieram</span>
+              </a>
+              <!-- modal with t-shirt selection -->
+              <div id="pizza-master-modal" class="uk-modal" uk-modal>
+                <div class="uk-modal-dialog uk-modal-body modal-choose-tshirt">
+                  <div class="uk-grid uk-grid-collapse">
+                    <div class="uk-width-medium-1-2 uk-width-1-1">
+                      <div class="t-shirt__single">
+                        <div class="t-shirt__white--modal uk-flex uk-flex-middle uk-flex-center">
+                          <div class="t-shirt__design--modal">
+                            <a href="pizza-master-design" data-uk-modal="target: #pizza-master-design" id="pizza-master-show" class="t-shirts__design">
+                              <img src="./assets/img/zoom-button.png"/>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="modal-form-container uk-width-medium-1-2 uk-width-1-1">
+                      <h1 class="modal-header">Pizza Master</h1>
+                      <h2 class="design-by">Design by Miskacz</h2>
+                      <form>
+                        <div>
+                          <select name="tshirt-size" form="tshirt-size">
+                            <option value="S">Wybierz rozmiar S</option>
+                            <option value="M">Wybierz rozmiar M</option>
+                            <option value="L">Wybierz rozmiar L</option>
+                            <option value="XL">Wybierz rozmiar XL</option>
+                          </select> 
+                        </div>
+                        <div>
+                          <input type="email" pattern="[^ @]*@[^ @]*" value="email" placeholder="Podaj email">
+                          </input>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
           <hr class="hr">
           <div class="t-shirts__copy">
             <h2>Pizza Master</h2>
             <p>Design by Miskacz</p>
           </div>
         </div>
+
         <div class="t-shirts__piece-container uk-flex uk-flex-center uk-flex-column uk-flex-middle">
-          <img src="./assets/img/tshirt.png" class="t-shirts__piece"/>
-          <img src="./assets/img/5.jpg" class="t-shirts__design"/>
+          <div class="t-shirt__single">
+            <img src="./assets/img/tshirt.png" class="t-shirts__piece"/>
+            <img src="./assets/img/5.jpg" class="t-shirts__design"/>
+            <div class="t-shirts__button">
+              <span>wybieram</span>
+            </div>
+          </div>
           <hr class="hr">
           <div class="t-shirts__copy">
             <h2>Deadlock</h2>
             <p>Design by Miskacz</p>
           </div>
         </div>
+
         <div class="t-shirts__piece-container uk-flex uk-flex-center uk-flex-column uk-flex-middle">
-          <img src="./assets/img/tshirt.png" class="t-shirts__piece"/>
-          <img src="./assets/img/9.jpg" class="t-shirts__design"/>
+          <div class="t-shirt__single">
+            <img src="./assets/img/tshirt.png" class="t-shirts__piece"/>
+            <img src="./assets/img/9.jpg" class="t-shirts__design"/>
+            <div class="t-shirts__button">
+              <span>wybieram</span>
+            </div>
+          </div>
           <hr class="hr">
           <div class="t-shirts__copy">
             <h2>Problem Solver</h2>
             <p>Design by Lis Kula</p>
           </div>
         </div>
+
         <div class="t-shirts__piece-container uk-flex uk-flex-center uk-flex-column uk-flex-middle">
-          <img src="./assets/img/tshirt.png" class="t-shirts__piece"/>
-          <img src="./assets/img/11.jpg" class="t-shirts__design"/>
+          <div class="t-shirt__single">
+            <img src="./assets/img/tshirt.png" class="t-shirts__piece"/>
+            <img src="./assets/img/11.jpg" class="t-shirts__design"/>
+            <div class="t-shirts__button">
+              <span>wybieram</span>
+            </div>
+          </div>
           <hr class="hr">
           <div class="t-shirts__copy">
             <h2>Basic Human Needs</h2>
             <p>Design by Lis Kula</p>
           </div>
         </div>
+
         <div class="t-shirts__piece-container uk-flex uk-flex-center uk-flex-column uk-flex-middle">
-          <img src="./assets/img/tshirt.png" class="t-shirts__piece"/>
-          <img src="./assets/img/6.jpg" class="t-shirts__design"/>
+          <div class="t-shirt__single">
+            <img src="./assets/img/tshirt.png" class="t-shirts__piece"/>
+            <img src="./assets/img/6.jpg" class="t-shirts__design"/>
+            <div class="t-shirts__button">
+              <span>wybieram</span>
+            </div>
+          </div>
           <hr class="hr">
           <div class="t-shirts__copy">
             <h2>Programming God</h2>
             <p>Design by Miskacz</p>
           </div>
         </div>
+
         <div class="t-shirts__piece-container uk-flex uk-flex-center uk-flex-column uk-flex-middle">
-          <img src="./assets/img/tshirt.png" class="t-shirts__piece"/>
-          <img src="./assets/img/10.jpg" class="t-shirts__design"/>
+          <div class="t-shirt__single">
+            <img src="./assets/img/tshirt.png" class="t-shirts__piece"/>
+            <img src="./assets/img/10.jpg" class="t-shirts__design"/>
+            <div class="t-shirts__button">
+              <span>wybieram</span>
+            </div>
+          </div>
           <hr class="hr">
           <div class="t-shirts__copy">
             <h2>Play Safe</h2>
             <p>Design by Lis Kula</p>
           </div>
         </div>
+
         <div class="t-shirts__piece-container uk-flex uk-flex-center uk-flex-column uk-flex-middle">
-          <img src="./assets/img/tshirt.png" class="t-shirts__piece"/>
-          <img src="./assets/img/4.jpg" class="t-shirts__design"/>
+          <div class="t-shirt__single">
+            <img src="./assets/img/tshirt.png" class="t-shirts__piece"/>
+            <img src="./assets/img/4.jpg" class="t-shirts__design"/>
+            <div class="t-shirts__button">
+              <span>wybieram</span>
+            </div>
+          </div>
           <hr class="hr">
           <div class="t-shirts__copy">
             <h2>Front-end vs Back-end</h2>
             <p>Design by Miskacz</p>
           </div>
         </div>
+
         <div class="t-shirts__piece-container uk-flex uk-flex-center uk-flex-column uk-flex-middle">
-          <img src="./assets/img/tshirt.png" class="t-shirts__piece"/>
-          <img src="./assets/img/7.jpg" class="t-shirts__design"/>
+          <div class="t-shirt__single">
+            <img src="./assets/img/tshirt.png" class="t-shirts__piece"/>
+            <img src="./assets/img/7.jpg" class="t-shirts__design"/>
+            <div class="t-shirts__button">
+              <span>wybieram</span>
+            </div>
+          </div>
           <hr class="hr">
           <div class="t-shirts__copy">
             <h2>Talk to Me</h2>
             <p>Design by Miskacz</p>
           </div>
         </div>
+
         <div class="t-shirts__piece-container uk-flex uk-flex-center uk-flex-column uk-flex-middle">
-          <img src="./assets/img/tshirt.png" class="t-shirts__piece"/>
-          <img src="./assets/img/12.jpg" class="t-shirts__design"/>
+          <div class="t-shirt__single">
+            <img src="./assets/img/tshirt.png" class="t-shirts__piece"/>
+            <img src="./assets/img/12.jpg" class="t-shirts__design"/>
+            <div class="t-shirts__button">
+              <span>wybieram</span>
+            </div>
+          </div>
           <hr class="hr">
           <div class="t-shirts__copy">
             <h2>Artful Coder</h2>
             <p>Design by Lis Kula</p>
           </div>
         </div>
+
         <div class="t-shirts__piece-container uk-flex uk-flex-center uk-flex-column uk-flex-middle">
-          <img src="./assets/img/tshirt.png" class="t-shirts__piece"/>
-          <img src="./assets/img/2.jpg" class="t-shirts__design"/>
+          <div class="t-shirt__single">
+            <img src="./assets/img/tshirt.png" class="t-shirts__piece"/>
+            <img src="./assets/img/2.jpg" class="t-shirts__design"/>
+            <div class="t-shirts__button">
+              <span>wybieram</span>
+            </div>
+          </div>
           <hr class="hr">
           <div class="t-shirts__copy">
             <h2>Coding State of Mind</h2>
             <p>Design by Miskacz</p>
           </div>
         </div>
+
         <div class="t-shirts__piece-container uk-flex uk-flex-center uk-flex-column uk-flex-middle">
-          <img src="./assets/img/tshirt.png" class="t-shirts__piece"/>
-          <img src="./assets/img/8.jpg" class="t-shirts__design"/>
+          <div class="t-shirt__single">
+            <img src="./assets/img/tshirt.png" class="t-shirts__piece"/>
+            <img src="./assets/img/8.jpg" class="t-shirts__design"/>
+            <div class="t-shirts__button">
+              <span>wybieram</span>
+            </div>
+          </div>
           <hr class="hr">
           <div class="t-shirts__copy">
             <h2>Codeholic</h2>
             <p>Design by Miskacz</p>
           </div>
         </div>
+
       </div>
       <div class="main-page__header">
         <h1>Designers</h1>
