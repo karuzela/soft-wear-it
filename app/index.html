@@ -61,13 +61,66 @@
         <h1>wybierz koszulkę</h1>
       </div>
       <div class="t-shirts__container uk-flex uk-flex-center uk-flex-wrap">
-
         <div class="t-shirts__piece-container uk-flex uk-flex-center uk-flex-column uk-flex-middle">
+          <!-- modal with t-shirt selection -->
+          <div id="spaghetti-code-modal" class="uk-modal modal-choose-t-shirt__container" uk-modal>
+            <div class="uk-modal-dialog uk-modal-body modal-choose-tshirt">
+              <div class="uk-grid">
+                <div class="uk-width-medium-1-2 uk-width-1-1">
+                  <div class="t-shirt__single">
+                    <div class="t-shirt__white--modal uk-flex uk-flex-middle uk-flex-center">
+                      <div class="t-shirt__design--modal spaghetti-code">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="modal-form-container uk-width-medium-1-2 uk-width-1-1">
+                  <h1 class="modal-header">Spaghetti Code</h1>
+                  <h2 class="design-by">Design by Miskacz</h2>
+                  <form>
+                    <div class="modal-form__field">
+                      <select name="tshirt-size" form="tshirt-size">
+                        <option value="S">Wybierz rozmiar S</option>
+                        <option value="M">Wybierz rozmiar M</option>
+                        <option value="L">Wybierz rozmiar L</option>
+                        <option value="XL">Wybierz rozmiar XL</option>
+                      </select> 
+                    </div>
+                    <div class="modal-form__field">
+                      <input type="email" pattern="[^ @]*@[^ @]*" placeholder="Podaj email"/>
+                    </div>
+                    <div class="modal-form__field">
+                      <input type="file" id="uploadCV-spaghetti-code"/>
+                      <label id="label__uploadCV-spaghetti-code" for="uploadCV-spaghetti-code">Załącz CV</label>
+                    </div>
+                    <div class="modal-form__field">
+                      <button class="modal__button">Wyślij</button>
+                    </div>
+                    <div class="modal-form__field">
+                      <input type="checkbox" id="checkbox-spaghetti-code" name="agreement" />
+                      <label for="checkbox-spaghetti-code">Lorem ipsum</label>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- modal with design zoom -->
+          <div id="spaghetti-code-design" class="uk-modal modal-zoom__container" uk-modal>
+            <div class="uk-modal-dialog uk-modal-body modal-zoom">
+              <img src="./assets/img/1.jpg"/>
+              <img src="./assets/img/button-close.png" class="button-close-zoom"/>
+            </div>
+          </div> 
           <div class="t-shirt__single">
             <img src="./assets/img/tshirt.png" class="t-shirts__piece"/>
             <img src="./assets/img/1.jpg" class="t-shirts__design"/>
             <div class="t-shirts__button">
-              <span>wybieram</span>
+              <a href="#spaghetti-code-modal" data-uk-modal="target: #spaghetti-code-modal" id="spaghetti-code-button"><span>wybieram</span>
+              </a>
+              <a href="spaghetti-code-design" data-uk-modal="target: #spaghetti-code-design" id="spaghetti-code-show" class="zoom-icon">
+                <img src="./assets/img/zoom-button.png"/>
+              </a>
             </div>
           </div>
           <hr class="hr">
@@ -78,21 +131,14 @@
         </div>
 
         <div class="t-shirts__piece-container uk-flex uk-flex-center uk-flex-column uk-flex-middle">
-        <!-- modal with design zoom -->
-          <div id="pizza-master-design" class="uk-modal modal-zoom__container" uk-modal>
-            <div class="uk-modal-dialog uk-modal-body modal-zoom">
-              <img src="./assets/img/3.jpg"/>
-              <img src="./assets/img/button-close.png" class="button-close-zoom"/>
-            </div>
-          </div>
-      <!-- modal with t-shirt selection -->
-          <div id="pizza-master-modal" class="uk-modal" uk-modal>
+          <!-- modal with t-shirt selection -->
+          <div id="pizza-master-modal" class="uk-modal modal-choose-t-shirt__container" uk-modal>
             <div class="uk-modal-dialog uk-modal-body modal-choose-tshirt">
               <div class="uk-grid">
                 <div class="uk-width-medium-1-2 uk-width-1-1">
                   <div class="t-shirt__single">
                     <div class="t-shirt__white--modal uk-flex uk-flex-middle uk-flex-center">
-                      <div class="t-shirt__design--modal">
+                      <div class="t-shirt__design--modal pizza-master">
                       </div>
                     </div>
                   </div>
@@ -103,10 +149,10 @@
                   <form>
                     <div class="modal-form__field">
                       <select name="tshirt-size" form="tshirt-size">
-                        <option value="S">Wybierz rozmiar </option>
-                        <option value="M">Wybierz rozmiar </option>
-                        <option value="L">Wybierz rozmiar </option>
-                        <option value="XL">Wybierz rozmiar </option>
+                        <option value="S">Wybierz rozmiar S</option>
+                        <option value="M">Wybierz rozmiar M</option>
+                        <option value="L">Wybierz rozmiar L</option>
+                        <option value="XL">Wybierz rozmiar XL</option>
                       </select> 
                     </div>
                     <div class="modal-form__field">
@@ -128,6 +174,13 @@
               </div>
             </div>
           </div>
+          <!-- modal with design zoom -->
+          <div id="pizza-master-design" class="uk-modal modal-zoom__container" uk-modal>
+            <div class="uk-modal-dialog uk-modal-body modal-zoom">
+              <img src="./assets/img/3.jpg"/>
+              <img src="./assets/img/button-close.png" class="button-close-zoom"/>
+            </div>
+          </div> 
           <div class="t-shirt__single">
             <img src="./assets/img/tshirt.png" class="t-shirts__piece"/>
             <img src="./assets/img/3.jpg" class="t-shirts__design"/>
@@ -147,11 +200,65 @@
         </div>
 
         <div class="t-shirts__piece-container uk-flex uk-flex-center uk-flex-column uk-flex-middle">
+          <!-- modal with t-shirt selection -->
+          <div id="deadlock-modal" class="uk-modal modal-choose-t-shirt__container" uk-modal>
+            <div class="uk-modal-dialog uk-modal-body modal-choose-tshirt">
+              <div class="uk-grid">
+                <div class="uk-width-medium-1-2 uk-width-1-1">
+                  <div class="t-shirt__single">
+                    <div class="t-shirt__white--modal uk-flex uk-flex-middle uk-flex-center">
+                      <div class="t-shirt__design--modal deadlock">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="modal-form-container uk-width-medium-1-2 uk-width-1-1">
+                  <h1 class="modal-header">Deadlock</h1>
+                  <h2 class="design-by">Design by Miskacz</h2>
+                  <form>
+                    <div class="modal-form__field">
+                      <select name="tshirt-size" form="tshirt-size">
+                        <option value="S">Wybierz rozmiar S</option>
+                        <option value="M">Wybierz rozmiar M</option>
+                        <option value="L">Wybierz rozmiar L</option>
+                        <option value="XL">Wybierz rozmiar XL</option>
+                      </select> 
+                    </div>
+                    <div class="modal-form__field">
+                      <input type="email" pattern="[^ @]*@[^ @]*" placeholder="Podaj email"/>
+                    </div>
+                    <div class="modal-form__field">
+                      <input type="file" id="uploadCV-deadlock"/>
+                      <label id="label__uploadCV-deadlock" for="uploadCV-deadlock">Załącz CV</label>
+                    </div>
+                    <div class="modal-form__field">
+                      <button class="modal__button">Wyślij</button>
+                    </div>
+                    <div class="modal-form__field">
+                      <input type="checkbox" id="checkbox-deadlock" name="agreement" />
+                      <label for="checkbox-deadlock">Lorem ipsum</label>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- modal with design zoom -->
+          <div id="deadlock-design" class="uk-modal modal-zoom__container" uk-modal>
+            <div class="uk-modal-dialog uk-modal-body modal-zoom">
+              <img src="./assets/img/5.jpg"/>
+              <img src="./assets/img/button-close.png" class="button-close-zoom"/>
+            </div>
+          </div> 
           <div class="t-shirt__single">
             <img src="./assets/img/tshirt.png" class="t-shirts__piece"/>
             <img src="./assets/img/5.jpg" class="t-shirts__design"/>
             <div class="t-shirts__button">
-              <span>wybieram</span>
+              <a href="#deadlock-modal" data-uk-modal="target: #deadlock-modal" id="deadlock-button"><span>wybieram</span>
+              </a>
+              <a href="deadlock-design" data-uk-modal="target: #deadlock-design" id="deadlock-show" class="zoom-icon">
+                <img src="./assets/img/zoom-button.png"/>
+              </a>
             </div>
           </div>
           <hr class="hr">
@@ -162,11 +269,65 @@
         </div>
 
         <div class="t-shirts__piece-container uk-flex uk-flex-center uk-flex-column uk-flex-middle">
+          <!-- modal with t-shirt selection -->
+          <div id="problem-solver-modal" class="uk-modal modal-choose-t-shirt__container" uk-modal>
+            <div class="uk-modal-dialog uk-modal-body modal-choose-tshirt">
+              <div class="uk-grid">
+                <div class="uk-width-medium-1-2 uk-width-1-1">
+                  <div class="t-shirt__single">
+                    <div class="t-shirt__white--modal uk-flex uk-flex-middle uk-flex-center">
+                      <div class="t-shirt__design--modal problem-solver">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="modal-form-container uk-width-medium-1-2 uk-width-1-1">
+                  <h1 class="modal-header">Problem Solver</h1>
+                  <h2 class="design-by">Design by Lis Kula</h2>
+                  <form>
+                    <div class="modal-form__field">
+                      <select name="tshirt-size" form="tshirt-size">
+                        <option value="S">Wybierz rozmiar S</option>
+                        <option value="M">Wybierz rozmiar M</option>
+                        <option value="L">Wybierz rozmiar L</option>
+                        <option value="XL">Wybierz rozmiar XL</option>
+                      </select> 
+                    </div>
+                    <div class="modal-form__field">
+                      <input type="email" pattern="[^ @]*@[^ @]*" placeholder="Podaj email"/>
+                    </div>
+                    <div class="modal-form__field">
+                      <input type="file" id="uploadCV-problem-solver"/>
+                      <label id="label__uploadCV-problem-solver" for="uploadCV-problem-solver">Załącz CV</label>
+                    </div>
+                    <div class="modal-form__field">
+                      <button class="modal__button">Wyślij</button>
+                    </div>
+                    <div class="modal-form__field">
+                      <input type="checkbox" id="checkbox-problem-solver" name="agreement" />
+                      <label for="checkbox-problem-solver">Lorem ipsum</label>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- modal with design zoom -->
+          <div id="problem-solver-design" class="uk-modal modal-zoom__container" uk-modal>
+            <div class="uk-modal-dialog uk-modal-body modal-zoom">
+              <img src="./assets/img/9.jpg"/>
+              <img src="./assets/img/button-close.png" class="button-close-zoom"/>
+            </div>
+          </div> 
           <div class="t-shirt__single">
             <img src="./assets/img/tshirt.png" class="t-shirts__piece"/>
             <img src="./assets/img/9.jpg" class="t-shirts__design"/>
             <div class="t-shirts__button">
-              <span>wybieram</span>
+              <a href="#problem-solver-modal" data-uk-modal="target: #problem-solver-modal" id="problem-solver-button"><span>wybieram</span>
+              </a>
+              <a href="problem-solver-design" data-uk-modal="target: #problem-solver-design" id="problem-solver-show" class="zoom-icon">
+                <img src="./assets/img/zoom-button.png"/>
+              </a>
             </div>
           </div>
           <hr class="hr">
@@ -177,11 +338,65 @@
         </div>
 
         <div class="t-shirts__piece-container uk-flex uk-flex-center uk-flex-column uk-flex-middle">
+          <!-- modal with t-shirt selection -->
+          <div id="basic-human-needs-modal" class="uk-modal modal-choose-t-shirt__container" uk-modal>
+            <div class="uk-modal-dialog uk-modal-body modal-choose-tshirt">
+              <div class="uk-grid">
+                <div class="uk-width-medium-1-2 uk-width-1-1">
+                  <div class="t-shirt__single">
+                    <div class="t-shirt__white--modal uk-flex uk-flex-middle uk-flex-center">
+                      <div class="t-shirt__design--modal basic-human-needs">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="modal-form-container uk-width-medium-1-2 uk-width-1-1">
+                  <h1 class="modal-header">Basic Human Needs</h1>
+                  <h2 class="design-by">Design by Lis Kula</h2>
+                  <form>
+                    <div class="modal-form__field">
+                      <select name="tshirt-size" form="tshirt-size">
+                        <option value="S">Wybierz rozmiar S</option>
+                        <option value="M">Wybierz rozmiar M</option>
+                        <option value="L">Wybierz rozmiar L</option>
+                        <option value="XL">Wybierz rozmiar XL</option>
+                      </select> 
+                    </div>
+                    <div class="modal-form__field">
+                      <input type="email" pattern="[^ @]*@[^ @]*" placeholder="Podaj email"/>
+                    </div>
+                    <div class="modal-form__field">
+                      <input type="file" id="uploadCV-basic-human-needs"/>
+                      <label id="label__uploadCV-basic-human-needs" for="uploadCV-basic-human-needs">Załącz CV</label>
+                    </div>
+                    <div class="modal-form__field">
+                      <button class="modal__button">Wyślij</button>
+                    </div>
+                    <div class="modal-form__field">
+                      <input type="checkbox" id="checkbox-basic-human-needs" name="agreement" />
+                      <label for="checkbox-basic-human-needs">Lorem ipsum</label>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- modal with design zoom -->
+          <div id="basic-human-needs-design" class="uk-modal modal-zoom__container" uk-modal>
+            <div class="uk-modal-dialog uk-modal-body modal-zoom">
+              <img src="./assets/img/11.jpg"/>
+              <img src="./assets/img/button-close.png" class="button-close-zoom"/>
+            </div>
+          </div> 
           <div class="t-shirt__single">
             <img src="./assets/img/tshirt.png" class="t-shirts__piece"/>
             <img src="./assets/img/11.jpg" class="t-shirts__design"/>
             <div class="t-shirts__button">
-              <span>wybieram</span>
+              <a href="#basic-human-needs-modal" data-uk-modal="target: #basic-human-needs-modal" id="basic-human-needs-button"><span>wybieram</span>
+              </a>
+              <a href="basic-human-needs-design" data-uk-modal="target: #basic-human-needs-design" id="basic-human-needs-show" class="zoom-icon">
+                <img src="./assets/img/zoom-button.png"/>
+              </a>
             </div>
           </div>
           <hr class="hr">
@@ -192,11 +407,65 @@
         </div>
 
         <div class="t-shirts__piece-container uk-flex uk-flex-center uk-flex-column uk-flex-middle">
+          <!-- modal with t-shirt selection -->
+          <div id="programming-god-modal" class="uk-modal modal-choose-t-shirt__container" uk-modal>
+            <div class="uk-modal-dialog uk-modal-body modal-choose-tshirt">
+              <div class="uk-grid">
+                <div class="uk-width-medium-1-2 uk-width-1-1">
+                  <div class="t-shirt__single">
+                    <div class="t-shirt__white--modal uk-flex uk-flex-middle uk-flex-center">
+                      <div class="t-shirt__design--modal programming-god">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="modal-form-container uk-width-medium-1-2 uk-width-1-1">
+                  <h1 class="modal-header">Programming God</h1>
+                  <h2 class="design-by">Design by Miskacz</h2>
+                  <form>
+                    <div class="modal-form__field">
+                      <select name="tshirt-size" form="tshirt-size">
+                        <option value="S">Wybierz rozmiar S</option>
+                        <option value="M">Wybierz rozmiar M</option>
+                        <option value="L">Wybierz rozmiar L</option>
+                        <option value="XL">Wybierz rozmiar XL</option>
+                      </select> 
+                    </div>
+                    <div class="modal-form__field">
+                      <input type="email" pattern="[^ @]*@[^ @]*" placeholder="Podaj email"/>
+                    </div>
+                    <div class="modal-form__field">
+                      <input type="file" id="uploadCV-programming-god"/>
+                      <label id="label__uploadCV-programming-god" for="uploadCV-programming-god">Załącz CV</label>
+                    </div>
+                    <div class="modal-form__field">
+                      <button class="modal__button">Wyślij</button>
+                    </div>
+                    <div class="modal-form__field">
+                      <input type="checkbox" id="checkbox-programming-god" name="agreement" />
+                      <label for="checkbox-programming-god">Lorem ipsum</label>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- modal with design zoom -->
+          <div id="programming-god-design" class="uk-modal modal-zoom__container" uk-modal>
+            <div class="uk-modal-dialog uk-modal-body modal-zoom">
+              <img src="./assets/img/6.jpg"/>
+              <img src="./assets/img/button-close.png" class="button-close-zoom"/>
+            </div>
+          </div> 
           <div class="t-shirt__single">
             <img src="./assets/img/tshirt.png" class="t-shirts__piece"/>
             <img src="./assets/img/6.jpg" class="t-shirts__design"/>
             <div class="t-shirts__button">
-              <span>wybieram</span>
+              <a href="#programming-god-modal" data-uk-modal="target: #programming-god-modal" id="programming-god-button"><span>wybieram</span>
+              </a>
+              <a href="programming-god-design" data-uk-modal="target: #programming-god-design" id="programming-god-show" class="zoom-icon">
+                <img src="./assets/img/zoom-button.png"/>
+              </a>
             </div>
           </div>
           <hr class="hr">
@@ -207,11 +476,65 @@
         </div>
 
         <div class="t-shirts__piece-container uk-flex uk-flex-center uk-flex-column uk-flex-middle">
+          <!-- modal with t-shirt selection -->
+          <div id="play-safe-modal" class="uk-modal modal-choose-t-shirt__container" uk-modal>
+            <div class="uk-modal-dialog uk-modal-body modal-choose-tshirt">
+              <div class="uk-grid">
+                <div class="uk-width-medium-1-2 uk-width-1-1">
+                  <div class="t-shirt__single">
+                    <div class="t-shirt__white--modal uk-flex uk-flex-middle uk-flex-center">
+                      <div class="t-shirt__design--modal play-safe">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="modal-form-container uk-width-medium-1-2 uk-width-1-1">
+                  <h1 class="modal-header">Play Safe</h1>
+                  <h2 class="design-by">Design by Lis Kula</h2>
+                  <form>
+                    <div class="modal-form__field">
+                      <select name="tshirt-size" form="tshirt-size">
+                        <option value="S">Wybierz rozmiar S</option>
+                        <option value="M">Wybierz rozmiar M</option>
+                        <option value="L">Wybierz rozmiar L</option>
+                        <option value="XL">Wybierz rozmiar XL</option>
+                      </select> 
+                    </div>
+                    <div class="modal-form__field">
+                      <input type="email" pattern="[^ @]*@[^ @]*" placeholder="Podaj email"/>
+                    </div>
+                    <div class="modal-form__field">
+                      <input type="file" id="uploadCV-play-safe"/>
+                      <label id="label__uploadCV-play-safe" for="uploadCV-play-safe">Załącz CV</label>
+                    </div>
+                    <div class="modal-form__field">
+                      <button class="modal__button">Wyślij</button>
+                    </div>
+                    <div class="modal-form__field">
+                      <input type="checkbox" id="checkbox-play-safe" name="agreement" />
+                      <label for="checkbox-play-safe">Lorem ipsum</label>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- modal with design zoom -->
+          <div id="play-safe-design" class="uk-modal modal-zoom__container" uk-modal>
+            <div class="uk-modal-dialog uk-modal-body modal-zoom">
+              <img src="./assets/img/10.jpg"/>
+              <img src="./assets/img/button-close.png" class="button-close-zoom"/>
+            </div>
+          </div> 
           <div class="t-shirt__single">
             <img src="./assets/img/tshirt.png" class="t-shirts__piece"/>
             <img src="./assets/img/10.jpg" class="t-shirts__design"/>
             <div class="t-shirts__button">
-              <span>wybieram</span>
+              <a href="#play-safe-modal" data-uk-modal="target: #play-safe-modal" id="play-safe-button"><span>wybieram</span>
+              </a>
+              <a href="play-safe-design" data-uk-modal="target: #play-safe-design" id="play-safe-show" class="zoom-icon">
+                <img src="./assets/img/zoom-button.png"/>
+              </a>
             </div>
           </div>
           <hr class="hr">
@@ -222,11 +545,65 @@
         </div>
 
         <div class="t-shirts__piece-container uk-flex uk-flex-center uk-flex-column uk-flex-middle">
+          <!-- modal with t-shirt selection -->
+          <div id="front-back-modal" class="uk-modal modal-choose-t-shirt__container" uk-modal>
+            <div class="uk-modal-dialog uk-modal-body modal-choose-tshirt">
+              <div class="uk-grid">
+                <div class="uk-width-medium-1-2 uk-width-1-1">
+                  <div class="t-shirt__single">
+                    <div class="t-shirt__white--modal uk-flex uk-flex-middle uk-flex-center">
+                      <div class="t-shirt__design--modal front-back">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="modal-form-container uk-width-medium-1-2 uk-width-1-1">
+                  <h1 class="modal-header">Front-end vs Back-end</h1>
+                  <h2 class="design-by">Design by Miskacz</h2>
+                  <form>
+                    <div class="modal-form__field">
+                      <select name="tshirt-size" form="tshirt-size">
+                        <option value="S">Wybierz rozmiar S</option>
+                        <option value="M">Wybierz rozmiar M</option>
+                        <option value="L">Wybierz rozmiar L</option>
+                        <option value="XL">Wybierz rozmiar XL</option>
+                      </select> 
+                    </div>
+                    <div class="modal-form__field">
+                      <input type="email" pattern="[^ @]*@[^ @]*" placeholder="Podaj email"/>
+                    </div>
+                    <div class="modal-form__field">
+                      <input type="file" id="uploadCV-front-back"/>
+                      <label id="label__uploadCV-front-back" for="uploadCV-front-back">Załącz CV</label>
+                    </div>
+                    <div class="modal-form__field">
+                      <button class="modal__button">Wyślij</button>
+                    </div>
+                    <div class="modal-form__field">
+                      <input type="checkbox" id="checkbox-front-back" name="agreement" />
+                      <label for="checkbox-front-back">Lorem ipsum</label>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- modal with design zoom -->
+          <div id="front-back-design" class="uk-modal modal-zoom__container" uk-modal>
+            <div class="uk-modal-dialog uk-modal-body modal-zoom">
+              <img src="./assets/img/4.jpg"/>
+              <img src="./assets/img/button-close.png" class="button-close-zoom"/>
+            </div>
+          </div> 
           <div class="t-shirt__single">
             <img src="./assets/img/tshirt.png" class="t-shirts__piece"/>
             <img src="./assets/img/4.jpg" class="t-shirts__design"/>
             <div class="t-shirts__button">
-              <span>wybieram</span>
+              <a href="#front-back-modal" data-uk-modal="target: #front-back-modal" id="front-back-button"><span>wybieram</span>
+              </a>
+              <a href="front-back-design" data-uk-modal="target: #front-back-design" id="front-back-show" class="zoom-icon">
+                <img src="./assets/img/zoom-button.png"/>
+              </a>
             </div>
           </div>
           <hr class="hr">
@@ -237,11 +614,65 @@
         </div>
 
         <div class="t-shirts__piece-container uk-flex uk-flex-center uk-flex-column uk-flex-middle">
+          <!-- modal with t-shirt selection -->
+          <div id="talk-to-me-modal" class="uk-modal modal-choose-t-shirt__container" uk-modal>
+            <div class="uk-modal-dialog uk-modal-body modal-choose-tshirt">
+              <div class="uk-grid">
+                <div class="uk-width-medium-1-2 uk-width-1-1">
+                  <div class="t-shirt__single">
+                    <div class="t-shirt__white--modal uk-flex uk-flex-middle uk-flex-center">
+                      <div class="t-shirt__design--modal talk-to-me">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="modal-form-container uk-width-medium-1-2 uk-width-1-1">
+                  <h1 class="modal-header">Talk to Me</h1>
+                  <h2 class="design-by">Design by Miskacz</h2>
+                  <form>
+                    <div class="modal-form__field">
+                      <select name="tshirt-size" form="tshirt-size">
+                        <option value="S">Wybierz rozmiar S</option>
+                        <option value="M">Wybierz rozmiar M</option>
+                        <option value="L">Wybierz rozmiar L</option>
+                        <option value="XL">Wybierz rozmiar XL</option>
+                      </select> 
+                    </div>
+                    <div class="modal-form__field">
+                      <input type="email" pattern="[^ @]*@[^ @]*" placeholder="Podaj email"/>
+                    </div>
+                    <div class="modal-form__field">
+                      <input type="file" id="uploadCV-talk-to-me"/>
+                      <label id="label__uploadCV-talk-to-me" for="uploadCV-talk-to-me">Załącz CV</label>
+                    </div>
+                    <div class="modal-form__field">
+                      <button class="modal__button">Wyślij</button>
+                    </div>
+                    <div class="modal-form__field">
+                      <input type="checkbox" id="checkbox-talk-to-me" name="agreement" />
+                      <label for="checkbox-talk-to-me">Lorem ipsum</label>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- modal with design zoom -->
+          <div id="talk-to-me-design" class="uk-modal modal-zoom__container" uk-modal>
+            <div class="uk-modal-dialog uk-modal-body modal-zoom">
+              <img src="./assets/img/7.jpg"/>
+              <img src="./assets/img/button-close.png" class="button-close-zoom"/>
+            </div>
+          </div> 
           <div class="t-shirt__single">
             <img src="./assets/img/tshirt.png" class="t-shirts__piece"/>
             <img src="./assets/img/7.jpg" class="t-shirts__design"/>
             <div class="t-shirts__button">
-              <span>wybieram</span>
+              <a href="#talk-to-me-modal" data-uk-modal="target: #talk-to-me-modal" id="talk-to-me-button"><span>wybieram</span>
+              </a>
+              <a href="talk-to-me-design" data-uk-modal="target: #talk-to-me-design" id="talk-to-me-show" class="zoom-icon">
+                <img src="./assets/img/zoom-button.png"/>
+              </a>
             </div>
           </div>
           <hr class="hr">
@@ -252,11 +683,65 @@
         </div>
 
         <div class="t-shirts__piece-container uk-flex uk-flex-center uk-flex-column uk-flex-middle">
+          <!-- modal with t-shirt selection -->
+          <div id="artful-coder-modal" class="uk-modal modal-choose-t-shirt__container" uk-modal>
+            <div class="uk-modal-dialog uk-modal-body modal-choose-tshirt">
+              <div class="uk-grid">
+                <div class="uk-width-medium-1-2 uk-width-1-1">
+                  <div class="t-shirt__single">
+                    <div class="t-shirt__white--modal uk-flex uk-flex-middle uk-flex-center">
+                      <div class="t-shirt__design--modal artful-coder">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="modal-form-container uk-width-medium-1-2 uk-width-1-1">
+                  <h1 class="modal-header">Artful Coder</h1>
+                  <h2 class="design-by">Design by Lis Kula</h2>
+                  <form>
+                    <div class="modal-form__field">
+                      <select name="tshirt-size" form="tshirt-size">
+                        <option value="S">Wybierz rozmiar S</option>
+                        <option value="M">Wybierz rozmiar M</option>
+                        <option value="L">Wybierz rozmiar L</option>
+                        <option value="XL">Wybierz rozmiar XL</option>
+                      </select> 
+                    </div>
+                    <div class="modal-form__field">
+                      <input type="email" pattern="[^ @]*@[^ @]*" placeholder="Podaj email"/>
+                    </div>
+                    <div class="modal-form__field">
+                      <input type="file" id="uploadCV-artful-coder"/>
+                      <label id="label__uploadCV-artful-coder" for="uploadCV-artful-coder">Załącz CV</label>
+                    </div>
+                    <div class="modal-form__field">
+                      <button class="modal__button">Wyślij</button>
+                    </div>
+                    <div class="modal-form__field">
+                      <input type="checkbox" id="checkbox-artful-coder" name="agreement" />
+                      <label for="checkbox-artful-coder">Lorem ipsum</label>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- modal with design zoom -->
+          <div id="artful-coder-design" class="uk-modal modal-zoom__container" uk-modal>
+            <div class="uk-modal-dialog uk-modal-body modal-zoom">
+              <img src="./assets/img/12.jpg"/>
+              <img src="./assets/img/button-close.png" class="button-close-zoom"/>
+            </div>
+          </div> 
           <div class="t-shirt__single">
             <img src="./assets/img/tshirt.png" class="t-shirts__piece"/>
             <img src="./assets/img/12.jpg" class="t-shirts__design"/>
             <div class="t-shirts__button">
-              <span>wybieram</span>
+              <a href="#artful-coder-modal" data-uk-modal="target: #artful-coder-modal" id="artful-coder-button"><span>wybieram</span>
+              </a>
+              <a href="artful-coder-design" data-uk-modal="target: #artful-coder-design" id="artful-coder-show" class="zoom-icon">
+                <img src="./assets/img/zoom-button.png"/>
+              </a>
             </div>
           </div>
           <hr class="hr">
@@ -267,11 +752,65 @@
         </div>
 
         <div class="t-shirts__piece-container uk-flex uk-flex-center uk-flex-column uk-flex-middle">
+          <!-- modal with t-shirt selection -->
+          <div id="coding-state-modal" class="uk-modal modal-choose-t-shirt__container" uk-modal>
+            <div class="uk-modal-dialog uk-modal-body modal-choose-tshirt">
+              <div class="uk-grid">
+                <div class="uk-width-medium-1-2 uk-width-1-1">
+                  <div class="t-shirt__single">
+                    <div class="t-shirt__white--modal uk-flex uk-flex-middle uk-flex-center">
+                      <div class="t-shirt__design--modal coding-state">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="modal-form-container uk-width-medium-1-2 uk-width-1-1">
+                  <h1 class="modal-header">Coding State of Mind</h1>
+                  <h2 class="design-by">Design by Miskacz</h2>
+                  <form>
+                    <div class="modal-form__field">
+                      <select name="tshirt-size" form="tshirt-size">
+                        <option value="S">Wybierz rozmiar S</option>
+                        <option value="M">Wybierz rozmiar M</option>
+                        <option value="L">Wybierz rozmiar L</option>
+                        <option value="XL">Wybierz rozmiar XL</option>
+                      </select> 
+                    </div>
+                    <div class="modal-form__field">
+                      <input type="email" pattern="[^ @]*@[^ @]*" placeholder="Podaj email"/>
+                    </div>
+                    <div class="modal-form__field">
+                      <input type="file" id="uploadCV-coding-state"/>
+                      <label id="label__uploadCV-coding-state" for="uploadCV-coding-state">Załącz CV</label>
+                    </div>
+                    <div class="modal-form__field">
+                      <button class="modal__button">Wyślij</button>
+                    </div>
+                    <div class="modal-form__field">
+                      <input type="checkbox" id="checkbox-coding-state" name="agreement" />
+                      <label for="checkbox-coding-state">Lorem ipsum</label>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- modal with design zoom -->
+          <div id="coding-state-design" class="uk-modal modal-zoom__container" uk-modal>
+            <div class="uk-modal-dialog uk-modal-body modal-zoom">
+              <img src="./assets/img/2.jpg"/>
+              <img src="./assets/img/button-close.png" class="button-close-zoom"/>
+            </div>
+          </div> 
           <div class="t-shirt__single">
             <img src="./assets/img/tshirt.png" class="t-shirts__piece"/>
             <img src="./assets/img/2.jpg" class="t-shirts__design"/>
             <div class="t-shirts__button">
-              <span>wybieram</span>
+              <a href="#coding-state-modal" data-uk-modal="target: #coding-state-modal" id="coding-state-button"><span>wybieram</span>
+              </a>
+              <a href="coding-state-design" data-uk-modal="target: #coding-state-design" id="coding-state-show" class="zoom-icon">
+                <img src="./assets/img/zoom-button.png"/>
+              </a>
             </div>
           </div>
           <hr class="hr">
@@ -282,11 +821,65 @@
         </div>
 
         <div class="t-shirts__piece-container uk-flex uk-flex-center uk-flex-column uk-flex-middle">
+          <!-- modal with t-shirt selection -->
+          <div id="codeholic-modal" class="uk-modal modal-choose-t-shirt__container" uk-modal>
+            <div class="uk-modal-dialog uk-modal-body modal-choose-tshirt">
+              <div class="uk-grid">
+                <div class="uk-width-medium-1-2 uk-width-1-1">
+                  <div class="t-shirt__single">
+                    <div class="t-shirt__white--modal uk-flex uk-flex-middle uk-flex-center">
+                      <div class="t-shirt__design--modal codeholic">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="modal-form-container uk-width-medium-1-2 uk-width-1-1">
+                  <h1 class="modal-header">Codeholic</h1>
+                  <h2 class="design-by">Design by Miskacz</h2>
+                  <form>
+                    <div class="modal-form__field">
+                      <select name="tshirt-size" form="tshirt-size">
+                        <option value="S">Wybierz rozmiar S</option>
+                        <option value="M">Wybierz rozmiar M</option>
+                        <option value="L">Wybierz rozmiar L</option>
+                        <option value="XL">Wybierz rozmiar XL</option>
+                      </select> 
+                    </div>
+                    <div class="modal-form__field">
+                      <input type="email" pattern="[^ @]*@[^ @]*" placeholder="Podaj email"/>
+                    </div>
+                    <div class="modal-form__field">
+                      <input type="file" id="uploadCV-codeholic"/>
+                      <label id="label__uploadCV-codeholic" for="uploadCV-codeholic">Załącz CV</label>
+                    </div>
+                    <div class="modal-form__field">
+                      <button class="modal__button">Wyślij</button>
+                    </div>
+                    <div class="modal-form__field">
+                      <input type="checkbox" id="checkbox-codeholic" name="agreement" />
+                      <label for="checkbox-codeholic">Lorem ipsum</label>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- modal with design zoom -->
+          <div id="codeholic-design" class="uk-modal modal-zoom__container" uk-modal>
+            <div class="uk-modal-dialog uk-modal-body modal-zoom">
+              <img src="./assets/img/8.jpg"/>
+              <img src="./assets/img/button-close.png" class="button-close-zoom"/>
+            </div>
+          </div> 
           <div class="t-shirt__single">
             <img src="./assets/img/tshirt.png" class="t-shirts__piece"/>
             <img src="./assets/img/8.jpg" class="t-shirts__design"/>
             <div class="t-shirts__button">
-              <span>wybieram</span>
+              <a href="#codeholic-modal" data-uk-modal="target: #codeholic-modal" id="codeholic-button"><span>wybieram</span>
+              </a>
+              <a href="codeholic-design" data-uk-modal="target: #codeholic-design" id="codeholic-show" class="zoom-icon">
+                <img src="./assets/img/zoom-button.png"/>
+              </a>
             </div>
           </div>
           <hr class="hr">
@@ -295,7 +888,6 @@
             <p>Design by Miskacz</p>
           </div>
         </div>
-
       </div>
       <div class="main-page__header">
         <h1>Designers</h1>

@@ -3,20 +3,21 @@ $(document).ready(function() {
 
   selectTshirt();
 
-  $("#pizza-master-button").on("click", function() {
-    UIkit.modal("#pizza-master-modal", {center:true}).show();
+  $('[id$="-button"]').on("click", function() {
+    var modalChooseTshirt = $(this).closest(".t-shirts__piece-container").find('.modal-choose-t-shirt__container');
+    UIkit.modal(modalChooseTshirt, {center:true}).show();
   })
 
-  $("#pizza-master-show").on("click", function() {
-    UIkit.modal("#pizza-master-design", {center:true}).show();
-  })
-
-  $(".button-close-zoom").on("click", function() {
-    UIkit.modal("#pizza-master-design").hide();
-  })
+  $('[id$="-show"]').on("click", function() {
+    var modalZoom = $(this).closest(".t-shirts__piece-container").find('.modal-zoom__container');
+    UIkit.modal(modalZoom, {center:true}).show();
+      $(".button-close-zoom").on("click", function() {
+        UIkit.modal(modalZoom).hide();
+      })
+    })
 });
 
-function selectTshirt () {
+function selectTshirt() {
   $(".t-shirt__single").hover(function() {
     var tshirt = $(this).find(".t-shirts__piece");
     var button = $(this).find(".t-shirts__button");
@@ -28,3 +29,5 @@ function selectTshirt () {
     button.toggleClass("active");
   });
 }
+
+

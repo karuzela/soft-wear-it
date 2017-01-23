@@ -50,7 +50,8 @@ input[type="email"] {
 
 .selectize-dropdown-content {
   padding: 0 !important;
-  .option:after {
+  .option:after,
+  .option.selected:after {
     content: url('../img/s-size.png');
     position: absolute;
     right: 11px;

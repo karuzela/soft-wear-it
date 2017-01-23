@@ -3,13 +3,16 @@
   background-repeat: no-repeat;
   background-position: center; 
   background-size: cover !important;
-  min-height: 70%;
-  width: 80% !important;
-  min-width: 320px;
+  min-height: 60%;
+  max-width: 70% !important;
+  min-width: 700px;
+  padding: 100px 0;
   @include r(phone-max) {
+    min-width: 720px;
     min-height: 80%;
     width: 60% !important;
     padding: 20px 40px;
+    min-width: 310px;
   }
   .uk-grid,
   .uk-width-medium-1-2 {
@@ -27,7 +30,6 @@
   }
 }
 .t-shirt__design--modal {
-  background-image: url('../img/3.jpg') !important;
   background-repeat: no-repeat;
   background-position: center; 
   height: 120px;
@@ -39,6 +41,54 @@
     max-width: 100px;
     max-height: 100px;
   }
+}
+
+.t-shirt__design--modal.spaghetti-code {
+  background-image: url('../img/1.jpg') !important;
+}
+
+.t-shirt__design--modal.pizza-master {
+  background-image: url('../img/3.jpg') !important;
+}
+
+.t-shirt__design--modal.deadlock {
+  background-image: url('../img/5.jpg') !important;
+}
+
+.t-shirt__design--modal.problem-solver {
+  background-image: url('../img/9.jpg') !important;
+}
+
+.t-shirt__design--modal.basic-human-needs {
+  background-image: url('../img/11.jpg') !important;
+}
+
+.t-shirt__design--modal.programming-god {
+  background-image: url('../img/6.jpg') !important;
+}
+
+.t-shirt__design--modal.play-safe {
+  background-image: url('../img/10.jpg') !important;
+}
+
+.t-shirt__design--modal.front-back {
+  background-image: url('../img/4.jpg') !important;
+}
+
+.t-shirt__design--modal.talk-to-me {
+  background-image: url('../img/7.jpg') !important;
+}
+
+.t-shirt__design--modal.artful-coder {
+  background-image: url('../img/12.jpg') !important;
+}
+
+.t-shirt__design--modal.coding-state {
+  background-image: url('../img/2.jpg') !important;
+}
+
+.t-shirt__design--modal.codeholic {
+  background-image: url('../img/8.jpg') !important;
 }
  
 .modal-form-container {
