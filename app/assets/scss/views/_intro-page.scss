@@ -4,7 +4,7 @@
   background-position: center; 
   background-size: cover;
   height: 100vh;
-  padding: 0 20%;
+  padding: 0 10%;
   min-width: 310px;
   @include r(phone-max) {
     padding: 0;
@@ -24,16 +24,21 @@
 
 .intro-page__content {
   height: inherit;
+  margin: 0 auto;
   h1 {
     font-family: 'Raleway-ExtraBoldItalic';
     font-size: 4.5rem;
     color: white;
     text-align: center;
     text-transform: uppercase;
+    margin-top: -10%;
     @include r(phone-max) {
       font-size: 3rem;
       padding: 0 5%;
       line-height: 25px;
+    }
+    @include r(large-screen-min) {
+      font-size: 7rem;
     }
   }
   p {
@@ -44,6 +49,10 @@
     text-transform: uppercase;
     @include r(phone-max) {
       font-size: 1.5rem;
+    }
+    @include r(large-screen-min) {
+      font-size: 3rem;
+      padding-top: 1rem;
     }
     span {
       color: $green;
@@ -59,7 +68,7 @@
 
 .content__logo-container {
   text-align: center;
-  padding-top: 30px;
+  padding-top: 60px;
   @include r(phone-max) {
     padding-top: 20px;
   } 

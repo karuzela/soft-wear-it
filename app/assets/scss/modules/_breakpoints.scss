@@ -1,13 +1,23 @@
 // Responsive shortcuts & mixins
 
+$large-screen-min: "(min-width: 1680px)";
+$large-screen-max: "(max-width: 1679px)";
+
 $tablet-min: "(min-width: 1024px)";
 $tablet-max: "(max-width: 1023px)";
 
 $phone-min: "(min-width: 768px)";
 $phone-max: "(max-width: 767px)";
 
+
 @mixin r($point) {
-  @if $point == tablet-min {
+  @if $point == large-screen-min {
+    @media (min-width: 1680px) { @content ; }
+  }
+  @else if $point == large-screen-max {
+    @media (max-width: 1679px) { @content ; }
+  }
+  @else if $point == tablet-min {
     @media (min-width: 1024px) { @content ; }
   }
   @else if $point == tablet-max {
