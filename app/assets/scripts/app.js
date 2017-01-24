@@ -18,7 +18,32 @@ $(document).ready(function() {
       UIkit.modal(modalZoom).hide();
     })
   })
+
+    $(".submit").on("click", function() {
+      var _this = $(this);
+      console.log(_this.find('select'));
+      var form = _this.parents('form');
+      var formData = new FormData(form[0]);
+
+
+      $.ajax({
+              url: 'upload.php',
+              type: 'POST',
+              data: formData,
+              async: false,
+              success: function (data) {
+                  console.log(data)
+              },
+              cache: false,
+              contentType: false,
+              processData: false
+          });
+
+
+      return false;
+    });
 });
+
 
 function selectTshirt() {
   $(".t-shirt__single").hover(function() {

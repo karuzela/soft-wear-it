@@ -78,9 +78,10 @@
                 <div class="modal-form-container uk-width-medium-1-2 uk-width-1-1">
                   <h1 class="modal-header">Spaghetti Code</h1>
                   <h2 class="design-by">Design by Miskacz</h2>
-                  <form>
+                  <form method="post" enctype="multipart/form-data">
+                  <input type="hidden" name="type" value="Spaghetti Code"/>
                     <div class="modal-form__field">
-                      <select name="tshirt-size" form="tshirt-size">
+                      <select name="tshirt-size">
                         <option value="S">Wybierz rozmiar S</option>
                         <option value="M">Wybierz rozmiar M</option>
                         <option value="L">Wybierz rozmiar L</option>
@@ -88,14 +89,14 @@
                       </select> 
                     </div>
                     <div class="modal-form__field">
-                      <input type="email" pattern="[^ @]*@[^ @]*" placeholder="Podaj email"/>
+                      <input name="email" type="email" pattern="[^ @]*@[^ @]*" placeholder="Podaj email"/>
                     </div>
                     <div class="modal-form__field">
-                      <input type="file" id="uploadCV-spaghetti-code"/>
+                      <input type="file" name="cv" id="uploadCV-spaghetti-code"/>
                       <label id="label__uploadCV-spaghetti-code" for="uploadCV-spaghetti-code">Załącz CV</label>
                     </div>
                     <div class="modal-form__field">
-                      <button class="modal__button">Wyślij</button>
+                      <button class="modal__button submit">Wyślij</button>
                     </div>
                     <div class="modal-form__field">
                       <input type="checkbox" id="checkbox-spaghetti-code" name="agreement" />
@@ -148,9 +149,10 @@
                 <div class="modal-form-container uk-width-medium-1-2 uk-width-1-1">
                   <h1 class="modal-header">Pizza Master</h1>
                   <h2 class="design-by">Design by Miskacz</h2>
-                  <form>
+                  <form method="post" enctype="multipart/form-data">
+                  <input type="hidden" name="type" value="Pizza Master"/>
                     <div class="modal-form__field">
-                      <select name="tshirt-size" form="tshirt-size">
+                      <select name="tshirt-size">
                         <option value="S">Wybierz rozmiar S</option>
                         <option value="M">Wybierz rozmiar M</option>
                         <option value="L">Wybierz rozmiar L</option>
@@ -158,14 +160,14 @@
                       </select> 
                     </div>
                     <div class="modal-form__field">
-                      <input type="email" pattern="[^ @]*@[^ @]*" placeholder="Podaj email"/>
+                      <input name="email" type="email" pattern="[^ @]*@[^ @]*" placeholder="Podaj email"/>
                     </div>
                     <div class="modal-form__field">
-                      <input type="file" id="uploadCV-pizza-master"/>
+                      <input type="file" name="cv" id="uploadCV-pizza-master"/>
                       <label id="label__uploadCV-pizza-master" for="uploadCV-pizza-master">Załącz CV</label>
                     </div>
                     <div class="modal-form__field">
-                      <button class="modal__button">Wyślij</button>
+                      <button class="modal__button submit">Wyślij</button>
                     </div>
                     <div class="modal-form__field">
                       <input type="checkbox" id="checkbox-pizza-master" name="agreement" />
@@ -218,9 +220,10 @@
                 <div class="modal-form-container uk-width-medium-1-2 uk-width-1-1">
                   <h1 class="modal-header">Deadlock</h1>
                   <h2 class="design-by">Design by Miskacz</h2>
-                  <form>
+                  <form method="post" enctype="multipart/form-data">
+                  <input type="hidden" name="type" value="Deadlock"/>
                     <div class="modal-form__field">
-                      <select name="tshirt-size" form="tshirt-size">
+                      <select name="tshirt-size">
                         <option value="S">Wybierz rozmiar S</option>
                         <option value="M">Wybierz rozmiar M</option>
                         <option value="L">Wybierz rozmiar L</option>
@@ -228,14 +231,14 @@
                       </select> 
                     </div>
                     <div class="modal-form__field">
-                      <input type="email" pattern="[^ @]*@[^ @]*" placeholder="Podaj email"/>
+                      <input name="email" type="email" pattern="[^ @]*@[^ @]*" placeholder="Podaj email"/>
                     </div>
                     <div class="modal-form__field">
-                      <input type="file" id="uploadCV-deadlock"/>
+                      <input type="file" name="cv" id="uploadCV-deadlock"/>
                       <label id="label__uploadCV-deadlock" for="uploadCV-deadlock">Załącz CV</label>
                     </div>
                     <div class="modal-form__field">
-                      <button class="modal__button">Wyślij</button>
+                      <button class="modal__button submit">Wyślij</button>
                     </div>
                     <div class="modal-form__field">
                       <input type="checkbox" id="checkbox-deadlock" name="agreement" />
@@ -286,11 +289,11 @@
                   </div>
                 </div>
                 <div class="modal-form-container uk-width-medium-1-2 uk-width-1-1">
-                  <h1 class="modal-header">Problem Solver</h1>
+                  <h1 class="modal-header">Problem Solver"/>
                   <h2 class="design-by">Design by Lis Kula</h2>
-                  <form>
+                  <form method="post" enctype="multipart/form-data">
                     <div class="modal-form__field">
-                      <select name="tshirt-size" form="tshirt-size">
+                      <select name="tshirt-size">
                         <option value="S">Wybierz rozmiar S</option>
                         <option value="M">Wybierz rozmiar M</option>
                         <option value="L">Wybierz rozmiar L</option>
@@ -298,14 +301,14 @@
                       </select> 
                     </div>
                     <div class="modal-form__field">
-                      <input type="email" pattern="[^ @]*@[^ @]*" placeholder="Podaj email"/>
+                      <input name="email" type="email" pattern="[^ @]*@[^ @]*" placeholder="Podaj email"/>
                     </div>
                     <div class="modal-form__field">
-                      <input type="file" id="uploadCV-problem-solver"/>
+                      <input type="file" name="cv" id="uploadCV-problem-solver"/>
                       <label id="label__uploadCV-problem-solver" for="uploadCV-problem-solver">Załącz CV</label>
                     </div>
                     <div class="modal-form__field">
-                      <button class="modal__button">Wyślij</button>
+                      <button class="modal__button submit">Wyślij</button>
                     </div>
                     <div class="modal-form__field">
                       <input type="checkbox" id="checkbox-problem-solver" name="agreement" />
@@ -356,11 +359,11 @@
                   </div>
                 </div>
                 <div class="modal-form-container uk-width-medium-1-2 uk-width-1-1">
-                  <h1 class="modal-header">Basic Human Needs</h1>
+                  <h1 class="modal-header">Basic Human Needs"/>
                   <h2 class="design-by">Design by Lis Kula</h2>
-                  <form>
+                  <form method="post" enctype="multipart/form-data">
                     <div class="modal-form__field">
-                      <select name="tshirt-size" form="tshirt-size">
+                      <select name="tshirt-size">
                         <option value="S">Wybierz rozmiar S</option>
                         <option value="M">Wybierz rozmiar M</option>
                         <option value="L">Wybierz rozmiar L</option>
@@ -368,14 +371,14 @@
                       </select> 
                     </div>
                     <div class="modal-form__field">
-                      <input type="email" pattern="[^ @]*@[^ @]*" placeholder="Podaj email"/>
+                      <input name="email" type="email" pattern="[^ @]*@[^ @]*" placeholder="Podaj email"/>
                     </div>
                     <div class="modal-form__field">
-                      <input type="file" id="uploadCV-basic-human-needs"/>
+                      <input type="file" name="cv" id="uploadCV-basic-human-needs"/>
                       <label id="label__uploadCV-basic-human-needs" for="uploadCV-basic-human-needs">Załącz CV</label>
                     </div>
                     <div class="modal-form__field">
-                      <button class="modal__button">Wyślij</button>
+                      <button class="modal__button submit">Wyślij</button>
                     </div>
                     <div class="modal-form__field">
                       <input type="checkbox" id="checkbox-basic-human-needs" name="agreement" />
@@ -428,9 +431,10 @@
                 <div class="modal-form-container uk-width-medium-1-2 uk-width-1-1">
                   <h1 class="modal-header">Programming God</h1>
                   <h2 class="design-by">Design by Miskacz</h2>
-                  <form>
+                  <form method="post" enctype="multipart/form-data">
+                  <input type="hidden" name="type" value="Programming God"/>
                     <div class="modal-form__field">
-                      <select name="tshirt-size" form="tshirt-size">
+                      <select name="tshirt-size">
                         <option value="S">Wybierz rozmiar S</option>
                         <option value="M">Wybierz rozmiar M</option>
                         <option value="L">Wybierz rozmiar L</option>
@@ -438,14 +442,14 @@
                       </select> 
                     </div>
                     <div class="modal-form__field">
-                      <input type="email" pattern="[^ @]*@[^ @]*" placeholder="Podaj email"/>
+                      <input name="email" type="email" pattern="[^ @]*@[^ @]*" placeholder="Podaj email"/>
                     </div>
                     <div class="modal-form__field">
-                      <input type="file" id="uploadCV-programming-god"/>
+                      <input type="file" name="cv" id="uploadCV-programming-god"/>
                       <label id="label__uploadCV-programming-god" for="uploadCV-programming-god">Załącz CV</label>
                     </div>
                     <div class="modal-form__field">
-                      <button class="modal__button">Wyślij</button>
+                      <button class="modal__button submit">Wyślij</button>
                     </div>
                     <div class="modal-form__field">
                       <input type="checkbox" id="checkbox-programming-god" name="agreement" />
@@ -496,11 +500,11 @@
                   </div>
                 </div>
                 <div class="modal-form-container uk-width-medium-1-2 uk-width-1-1">
-                  <h1 class="modal-header">Play Safe</h1>
+                  <h1 class="modal-header">Play Safe"/>
                   <h2 class="design-by">Design by Lis Kula</h2>
-                  <form>
+                  <form method="post" enctype="multipart/form-data">
                     <div class="modal-form__field">
-                      <select name="tshirt-size" form="tshirt-size">
+                      <select name="tshirt-size">
                         <option value="S">Wybierz rozmiar S</option>
                         <option value="M">Wybierz rozmiar M</option>
                         <option value="L">Wybierz rozmiar L</option>
@@ -508,14 +512,14 @@
                       </select> 
                     </div>
                     <div class="modal-form__field">
-                      <input type="email" pattern="[^ @]*@[^ @]*" placeholder="Podaj email"/>
+                      <input name="email" type="email" pattern="[^ @]*@[^ @]*" placeholder="Podaj email"/>
                     </div>
                     <div class="modal-form__field">
-                      <input type="file" id="uploadCV-play-safe"/>
+                      <input type="file" name="cv" id="uploadCV-play-safe"/>
                       <label id="label__uploadCV-play-safe" for="uploadCV-play-safe">Załącz CV</label>
                     </div>
                     <div class="modal-form__field">
-                      <button class="modal__button">Wyślij</button>
+                      <button class="modal__button submit">Wyślij</button>
                     </div>
                     <div class="modal-form__field">
                       <input type="checkbox" id="checkbox-play-safe" name="agreement" />
@@ -568,9 +572,10 @@
                 <div class="modal-form-container uk-width-medium-1-2 uk-width-1-1">
                   <h1 class="modal-header">Front-end vs Back-end</h1>
                   <h2 class="design-by">Design by Miskacz</h2>
-                  <form>
+                  <form method="post" enctype="multipart/form-data">
+                  <input type="hidden" name="type" value="Front-end vs Back-end"/>
                     <div class="modal-form__field">
-                      <select name="tshirt-size" form="tshirt-size">
+                      <select name="tshirt-size">
                         <option value="S">Wybierz rozmiar S</option>
                         <option value="M">Wybierz rozmiar M</option>
                         <option value="L">Wybierz rozmiar L</option>
@@ -578,14 +583,14 @@
                       </select> 
                     </div>
                     <div class="modal-form__field">
-                      <input type="email" pattern="[^ @]*@[^ @]*" placeholder="Podaj email"/>
+                      <input name="email" type="email" pattern="[^ @]*@[^ @]*" placeholder="Podaj email"/>
                     </div>
                     <div class="modal-form__field">
-                      <input type="file" id="uploadCV-front-back"/>
+                      <input type="file" name="cv" id="uploadCV-front-back"/>
                       <label id="label__uploadCV-front-back" for="uploadCV-front-back">Załącz CV</label>
                     </div>
                     <div class="modal-form__field">
-                      <button class="modal__button">Wyślij</button>
+                      <button class="modal__button submit">Wyślij</button>
                     </div>
                     <div class="modal-form__field">
                       <input type="checkbox" id="checkbox-front-back" name="agreement" />
@@ -638,9 +643,10 @@
                 <div class="modal-form-container uk-width-medium-1-2 uk-width-1-1">
                   <h1 class="modal-header">Talk to Me</h1>
                   <h2 class="design-by">Design by Miskacz</h2>
-                  <form>
+                  <form method="post" enctype="multipart/form-data">
+                  <input type="hidden" name="type" value="Talk to Me"/>
                     <div class="modal-form__field">
-                      <select name="tshirt-size" form="tshirt-size">
+                      <select name="tshirt-size">
                         <option value="S">Wybierz rozmiar S</option>
                         <option value="M">Wybierz rozmiar M</option>
                         <option value="L">Wybierz rozmiar L</option>
@@ -648,14 +654,14 @@
                       </select> 
                     </div>
                     <div class="modal-form__field">
-                      <input type="email" pattern="[^ @]*@[^ @]*" placeholder="Podaj email"/>
+                      <input name="email" type="email" pattern="[^ @]*@[^ @]*" placeholder="Podaj email"/>
                     </div>
                     <div class="modal-form__field">
-                      <input type="file" id="uploadCV-talk-to-me"/>
+                      <input type="file" name="cv" id="uploadCV-talk-to-me"/>
                       <label id="label__uploadCV-talk-to-me" for="uploadCV-talk-to-me">Załącz CV</label>
                     </div>
                     <div class="modal-form__field">
-                      <button class="modal__button">Wyślij</button>
+                      <button class="modal__button submit">Wyślij</button>
                     </div>
                     <div class="modal-form__field">
                       <input type="checkbox" id="checkbox-talk-to-me" name="agreement" />
@@ -706,11 +712,11 @@
                   </div>
                 </div>
                 <div class="modal-form-container uk-width-medium-1-2 uk-width-1-1">
-                  <h1 class="modal-header">Artful Coder</h1>
+                  <h1 class="modal-header">Artful Coder"/>
                   <h2 class="design-by">Design by Lis Kula</h2>
-                  <form>
+                  <form method="post" enctype="multipart/form-data">
                     <div class="modal-form__field">
-                      <select name="tshirt-size" form="tshirt-size">
+                      <select name="tshirt-size">
                         <option value="S">Wybierz rozmiar S</option>
                         <option value="M">Wybierz rozmiar M</option>
                         <option value="L">Wybierz rozmiar L</option>
@@ -718,14 +724,14 @@
                       </select> 
                     </div>
                     <div class="modal-form__field">
-                      <input type="email" pattern="[^ @]*@[^ @]*" placeholder="Podaj email"/>
+                      <input name="email" type="email" pattern="[^ @]*@[^ @]*" placeholder="Podaj email"/>
                     </div>
                     <div class="modal-form__field">
-                      <input type="file" id="uploadCV-artful-coder"/>
+                      <input type="file" name="cv" id="uploadCV-artful-coder"/>
                       <label id="label__uploadCV-artful-coder" for="uploadCV-artful-coder">Załącz CV</label>
                     </div>
                     <div class="modal-form__field">
-                      <button class="modal__button">Wyślij</button>
+                      <button class="modal__button submit">Wyślij</button>
                     </div>
                     <div class="modal-form__field">
                       <input type="checkbox" id="checkbox-artful-coder" name="agreement" />
@@ -778,9 +784,10 @@
                 <div class="modal-form-container uk-width-medium-1-2 uk-width-1-1">
                   <h1 class="modal-header">Coding State of Mind</h1>
                   <h2 class="design-by">Design by Miskacz</h2>
-                  <form>
+                  <form method="post" enctype="multipart/form-data">
+                  <input type="hidden" name="type" value="Coding State of Mind"/>
                     <div class="modal-form__field">
-                      <select name="tshirt-size" form="tshirt-size">
+                      <select name="tshirt-size">
                         <option value="S">Wybierz rozmiar S</option>
                         <option value="M">Wybierz rozmiar M</option>
                         <option value="L">Wybierz rozmiar L</option>
@@ -788,14 +795,14 @@
                       </select> 
                     </div>
                     <div class="modal-form__field">
-                      <input type="email" pattern="[^ @]*@[^ @]*" placeholder="Podaj email"/>
+                      <input name="email" type="email" pattern="[^ @]*@[^ @]*" placeholder="Podaj email"/>
                     </div>
                     <div class="modal-form__field">
-                      <input type="file" id="uploadCV-coding-state"/>
+                      <input type="file" name="cv" id="uploadCV-coding-state"/>
                       <label id="label__uploadCV-coding-state" for="uploadCV-coding-state">Załącz CV</label>
                     </div>
                     <div class="modal-form__field">
-                      <button class="modal__button">Wyślij</button>
+                      <button class="modal__button submit">Wyślij</button>
                     </div>
                     <div class="modal-form__field">
                       <input type="checkbox" id="checkbox-coding-state" name="agreement" />
@@ -848,9 +855,10 @@
                 <div class="modal-form-container uk-width-medium-1-2 uk-width-1-1">
                   <h1 class="modal-header">Codeholic</h1>
                   <h2 class="design-by">Design by Miskacz</h2>
-                  <form>
+                  <form method="post" enctype="multipart/form-data">
+                  <input type="hidden" name="type" value="Codeholic"/>
                     <div class="modal-form__field">
-                      <select name="tshirt-size" form="tshirt-size">
+                      <select name="tshirt-size">
                         <option value="S">Wybierz rozmiar S</option>
                         <option value="M">Wybierz rozmiar M</option>
                         <option value="L">Wybierz rozmiar L</option>
@@ -858,14 +866,14 @@
                       </select> 
                     </div>
                     <div class="modal-form__field">
-                      <input type="email" pattern="[^ @]*@[^ @]*" placeholder="Podaj email"/>
+                      <input name="email" type="email" pattern="[^ @]*@[^ @]*" placeholder="Podaj email"/>
                     </div>
                     <div class="modal-form__field">
-                      <input type="file" id="uploadCV-codeholic"/>
+                      <input type="file" name="cv" id="uploadCV-codeholic"/>
                       <label id="label__uploadCV-codeholic" for="uploadCV-codeholic">Załącz CV</label>
                     </div>
                     <div class="modal-form__field">
-                      <button class="modal__button">Wyślij</button>
+                      <button class="modal__button submit">Wyślij</button>
                     </div>
                     <div class="modal-form__field">
                       <input type="checkbox" id="checkbox-codeholic" name="agreement" />
