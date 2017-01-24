@@ -6,6 +6,9 @@
   height: 100vh;
   padding: 0 20%;
   min-width: 310px;
+  @include r(phone-max) {
+    padding: 0;
+  }
 }
 
 .intro-page__additional-background {
@@ -28,7 +31,9 @@
     text-align: center;
     text-transform: uppercase;
     @include r(phone-max) {
-      font-size: 3.5rem;
+      font-size: 3rem;
+      padding: 0 5%;
+      line-height: 25px;
     }
   }
   p {
@@ -46,12 +51,18 @@
   }
   & > div {
     flex: 1;
+    @include r(phone-max) {
+      flex: auto;
+    }
   }
 }
 
 .content__logo-container {
   text-align: center;
   padding-top: 30px;
+  @include r(phone-max) {
+    padding-top: 20px;
+  } 
 }
 
 .content__copy-container {
@@ -66,8 +77,8 @@
   @include r(phone-max) {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    padding-left: 20%;
+    align-items: flex-start;
     align-content: center;
   }
   .content__instruction {
@@ -76,9 +87,10 @@
       font-family: 'Raleway-Black';
       font-size: 2.8rem;
       color: $green; 
-      padding-top: 30px;
+      padding-top: 10px;
       @include r(phone-max) {
-        font-size: 1.8rem;
+        font-size: 1.5rem;
+        text-align: left;
       }
     }
     .instruction__number {
@@ -93,10 +105,9 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      margin: 0 auto;
-      left: -390px;
+      left: -50px;
       right: 0;
-      top: 25px;
+      top: 3px;
       span {
         font-family: 'Raleway-Black';
         font-size: 2.3rem;

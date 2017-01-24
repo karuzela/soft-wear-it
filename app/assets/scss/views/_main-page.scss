@@ -10,7 +10,12 @@
 .main-page__content {
   min-height: inherit;
   min-width: inherit;
-  padding: 0 20%;
+  padding: 0 5%;
+  max-width: 1100px;
+  margin: 0 auto;
+  @include r(phone-max) {
+    padding: 0;
+  }
   h1 {
     font-family: 'Raleway-Black';
     font-size: 4.8rem;
@@ -34,12 +39,12 @@
 .t-shirts__piece-container {
   position: relative;
   .t-shirts__piece {
-    min-width: 248px;
-    padding-top: 20px;
+    width: 350px;
+    padding: 20px;
   }
   .t-shirts__design {
     position: absolute;
-    width: 46%;
+    width: 42%;
     top: 100px;
     left: 0;
     right: 0;
@@ -51,13 +56,20 @@
   position: absolute;
   top: -295px;
   right: -60px;
+  @include r(phone-max) {
+    top: -245px;
+  }
 }
 
 .t-shirts__button {
   display: none;
   position: absolute;
-  top: 333px;
-  left: 105px;
+  top: 328px;
+  left: 119px;
+  @include r(phone-max) {
+    top: 65%;
+    left: 35%;
+  }
   span {
     font-family: 'Raleway-Black';
     font-size: 1.7rem;

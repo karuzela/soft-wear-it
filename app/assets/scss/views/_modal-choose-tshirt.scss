@@ -13,10 +13,22 @@
     width: 60% !important;
     padding: 20px 40px;
     min-width: 310px;
+    position: relative;
   }
   .uk-grid,
   .uk-width-medium-1-2 {
     height: inherit;
+  }
+}
+
+.button-close-tshirt {
+  display: none;
+  @include r(phone-max) {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
   }
 }
 
@@ -102,8 +114,11 @@
     font-size: 4rem;
     color: $grey;
     text-align: left;
-    margin: 50px 0 0 0;
+    margin: 50px 30px 0 0;
     text-transform: initial;
+    @include r(phone-max) {
+      margin: 0;
+    }
   }
 }
 
