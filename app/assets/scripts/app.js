@@ -31,8 +31,15 @@ $(document).ready(function() {
               type: 'POST',
               data: formData,
               async: false,
+              beforeSubmit: function(){
+                $('.errors').html('');
+              },
               success: function (data) {
-                  console.log(data)
+                  if(data.status == 1){
+                    alert('success');
+                  } else {
+                    $('.errors').html(data.errors);
+                  }
               },
               cache: false,
               contentType: false,
