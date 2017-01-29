@@ -2,6 +2,11 @@
   padding: 8px 0;
 }
 
+.modal-form__email {
+  position: relative;
+  height: 37px;
+}
+
 input[type="email"],
 .selectize-input,
 .selectize-dropdown-content,
@@ -52,26 +57,28 @@ input[type="email"] {
   padding: 0 !important;
   .option:after,
   .option.selected:after {
-    content: url('../img/s-size.png');
+    content: url('../img/s-size.svg');
     position: absolute;
     right: 11px;
     top: 10px;
+    height: 20px;
+    width: 20px;
   }
   .option:nth-of-type(2) {
     &:after {
-      content: url('../img/m-size.png');
+      content: url('../img/m-size.svg');
       top: 50px;
     }
   }
   .option:nth-of-type(3) {
     &:after {
-      content: url('../img/l-size.png');
+      content: url('../img/l-size.svg');
       top: 86px;
     }
   }
   .option:nth-of-type(4) {
     &:after {
-      content: url('../img/xl-size.png');
+      content: url('../img/xl-size.svg');
       top: 125px;
     }
   }

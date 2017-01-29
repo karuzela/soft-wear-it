@@ -23,30 +23,34 @@
       <div class="intro-page__content uk-container uk-flex uk-flex-center uk-flex-column uk-flex-space-between">
         <div class="content__logo-container">
           <img src="./assets/img/logo.png"/>
+          <p>
+            <span class="lang-version-pl">pl</span>
+            <span class="lang-version-en">en</span>
+          </p>
         </div>
         <div class="content__copy-container">
-          <h1 class="">Szukasz wyjątkowego stylu?
+          <h1 class="">Jesteś specjalistą IT?
           </h1>
-          <p>Prześlij nam swoje CV i 
-            <span>odbierz wyjątkowy t-shirt
+          <p>Wykorzystaj to, żeby 
+            <span>dostać wyjątkowy T-shirt! 
             </span>
           </p>
         </div>
         <div class="content__instructions-container">
           <div class="content__instruction">
-            <p>wybierz koszulkę</p>
+            <p>WYBIERZ T-SHIRT I ZUPLOADUJ CV</p>
             <div class=instruction__number>
               <span>1</span>
             </div>
           </div>
           <div class="content__instruction">
-            <p>sprawdź swoją wiedzę</p>
-            <div class=instruction__number>
+            <p>ROZWIĄŻ KRÓTKI TEST, KTÓRY DOSTANIESZ NA MAILA</p>
+            <div class="instruction__number instruction__number2">
               <span>2</span>
             </div>
           </div>
           <div class="content__instruction">
-            <p>dołącz do naszej społeczności</p>
+            <p>ODBIERZ T-SHIRT</p>
             <div class=instruction__number>
               <span>3</span>
             </div>
@@ -75,10 +79,10 @@
                     </div>
                   </div>
                 </div>
-                <div class="modal-form-container uk-width-medium-1-2 uk-width-1-1">
-                  <h1 class="modal-header">Spaghetti Code</h1>
-                  <h2 class="design-by">Design by Miskacz</h2>
-                  <form>
+                <form>
+                  <div class="modal-form-container uk-width-medium-1-2 uk-width-1-1">
+                    <h1 class="modal-header">Spaghetti Code</h1>
+                    <h2 class="design-by">Design by Miskacz</h2>
                     <div class="modal-form__field">
                       <select name="tshirt-size" form="tshirt-size">
                         <option value="S">Wybierz rozmiar S</option>
@@ -87,8 +91,11 @@
                         <option value="XL">Wybierz rozmiar XL</option>
                       </select> 
                     </div>
-                    <div class="modal-form__field">
-                      <input type="email" pattern="[^ @]*@[^ @]*" placeholder="Podaj email"/>
+                    <div class="modal-form__field modal-form__email">
+                        <input type="email" pattern="[^ @]*@[^ @]*" placeholder="Podaj email"/>
+                        <div class="tooltip">
+                          <span class="tooltiptext">Zuploaduj swoje CV do naszej bazy specjalistów IT. W odpowiedzi wyślemy do Ciebie krótki test, po rozwiązaniu którego otrzymasz wybrany przez siebie T-shirt.</span>
+                        </div>
                     </div>
                     <div class="modal-form__field">
                       <input type="file" id="uploadCV-spaghetti-code"/>
@@ -98,10 +105,16 @@
                       <button class="modal__button">Wyślij</button>
                     </div>
                     <div class="modal-form__field">
-                      <input type="checkbox" id="checkbox-spaghetti-code" name="agreement" />
-                      <label for="checkbox-spaghetti-code">Lorem ipsum</label>
                     </div>
-                  </form>
+                  </div>
+                </form>
+              </div>
+              <div class="uk-grid">
+                <div class="uk-width-1-1">
+                  <div class="checkbox-container">
+                    <input type="checkbox" id="checkbox-spaghetti-code" name="agreement" />
+                    <label for="checkbox-spaghetti-code">Wyrażam zgodę na przetwarzanie moich danych osobowych przez Connectis sp. z o. o. (Al. Jerozolimskie 96, 00-807 Warszawa) oraz Asistera Poland sp. z o. o. (ul. Nowogrodzka 50/515, 00-695 Warszawa), współadministratorów zbioru danych osobowych, w celach rekrutacyjnych. Współadministratorzy zapewniają dostęp do danych osobowych oraz umożliwiają ich poprawianie. Podanie danych osobowych jest dobrowolne. Oświadczam, że zostałem poinformowany o uprawnieniach przysługujących mi na podstawie ustawy z dnia 29 sierpnia 1997 r. o ochronie danych osobowych (tekst jednolity: Dz.U. z 2015 r., poz. 2135 z późn. zm.) oraz że wgląd do moich danych mogą posiadać potencjalni pracodawcy będący klientami Connectis sp. z o. o. i Asistera sp. z o. o.</label>
+                  </div>
                 </div>
               </div>
             </div>
@@ -113,17 +126,18 @@
               <img src="./assets/img/button-close.png" class="button-close-zoom"/>
             </div>
           </div> 
-          <div class="t-shirt__single">
-            <img src="./assets/img/tshirt.png" class="t-shirts__piece"/>
-            <img src="./assets/img/1.jpg" class="t-shirts__design"/>
-            <div class="t-shirts__button">
-              <a href="#spaghetti-code-modal" data-uk-modal="target: #spaghetti-code-modal" id="spaghetti-code-button"><span>wybieram</span>
-              </a>
-              <a href="spaghetti-code-design" data-uk-modal="target: #spaghetti-code-design" id="spaghetti-code-show" class="zoom-icon">
-                <img src="./assets/img/zoom-button.png"/>
-              </a>
+          <a href="#spaghetti-code-modal" data-uk-modal="target: #spaghetti-code-modal" id="spaghetti-code-button">
+            <div class="t-shirt__single">
+              <img src="./assets/img/tshirt.png" class="t-shirts__piece"/>
+              <img src="./assets/img/1.jpg" class="t-shirts__design"/>
+              <div class="t-shirts__button">
+                <span>wybieram</span>
+                <a href="spaghetti-code-design" data-uk-modal="target: #spaghetti-code-design" id="spaghetti-code-show" class="zoom-icon">
+                  <img src="./assets/img/zoom-button.png"/>
+                </a>
+              </div>
             </div>
-          </div>
+          </a>
           <hr class="hr">
           <div class="t-shirts__copy">
             <h2>Spaghetti Code</h2>
@@ -183,17 +197,18 @@
               <img src="./assets/img/button-close.png" class="button-close-zoom"/>
             </div>
           </div> 
-          <div class="t-shirt__single">
-            <img src="./assets/img/tshirt.png" class="t-shirts__piece"/>
-            <img src="./assets/img/3.jpg" class="t-shirts__design"/>
-            <div class="t-shirts__button">
-              <a href="#pizza-master-modal" data-uk-modal="target: #pizza-master-modal" id="pizza-master-button"><span>wybieram</span>
-              </a>
-              <a href="pizza-master-design" data-uk-modal="target: #pizza-master-design" id="pizza-master-show" class="zoom-icon">
-                <img src="./assets/img/zoom-button.png"/>
-              </a>
+          <a href="#pizza-master-modal" data-uk-modal="target: #pizza-master-modal" id="pizza-master-button">
+            <div class="t-shirt__single">
+              <img src="./assets/img/tshirt.png" class="t-shirts__piece"/>
+              <img src="./assets/img/3.jpg" class="t-shirts__design"/>
+              <div class="t-shirts__button">
+                <span>wybieram</span>
+                <a href="pizza-master-design" data-uk-modal="target: #pizza-master-design" id="pizza-master-show" class="zoom-icon">
+                  <img src="./assets/img/zoom-button.png"/>
+                </a>
+              </div>
             </div>
-          </div>
+          </a>
           <hr class="hr">
           <div class="t-shirts__copy">
             <h2>Pizza Master</h2>
@@ -253,17 +268,18 @@
               <img src="./assets/img/button-close.png" class="button-close-zoom"/>
             </div>
           </div> 
-          <div class="t-shirt__single">
-            <img src="./assets/img/tshirt.png" class="t-shirts__piece"/>
-            <img src="./assets/img/5.jpg" class="t-shirts__design"/>
-            <div class="t-shirts__button">
-              <a href="#deadlock-modal" data-uk-modal="target: #deadlock-modal" id="deadlock-button"><span>wybieram</span>
-              </a>
-              <a href="deadlock-design" data-uk-modal="target: #deadlock-design" id="deadlock-show" class="zoom-icon">
-                <img src="./assets/img/zoom-button.png"/>
-              </a>
+          <a href="#deadlock-modal" data-uk-modal="target: #deadlock-modal" id="deadlock-button">
+            <div class="t-shirt__single">
+              <img src="./assets/img/tshirt.png" class="t-shirts__piece"/>
+              <img src="./assets/img/5.jpg" class="t-shirts__design"/>
+              <div class="t-shirts__button">
+                <span>wybieram</span>
+                <a href="deadlock-design" data-uk-modal="target: #deadlock-design" id="deadlock-show" class="zoom-icon">
+                  <img src="./assets/img/zoom-button.png"/>
+                </a>
+              </div>
             </div>
-          </div>
+          </a>
           <hr class="hr">
           <div class="t-shirts__copy">
             <h2>Deadlock</h2>
@@ -323,17 +339,18 @@
               <img src="./assets/img/button-close.png" class="button-close-zoom"/>
             </div>
           </div> 
-          <div class="t-shirt__single">
-            <img src="./assets/img/tshirt.png" class="t-shirts__piece"/>
-            <img src="./assets/img/9.jpg" class="t-shirts__design"/>
-            <div class="t-shirts__button">
-              <a href="#problem-solver-modal" data-uk-modal="target: #problem-solver-modal" id="problem-solver-button"><span>wybieram</span>
-              </a>
-              <a href="problem-solver-design" data-uk-modal="target: #problem-solver-design" id="problem-solver-show" class="zoom-icon">
-                <img src="./assets/img/zoom-button.png"/>
-              </a>
+          <a href="#problem-solver-modal" data-uk-modal="target: #problem-solver-modal" id="problem-solver-button">
+            <div class="t-shirt__single">
+              <img src="./assets/img/tshirt.png" class="t-shirts__piece"/>
+              <img src="./assets/img/9.jpg" class="t-shirts__design"/>
+              <div class="t-shirts__button">
+                <span>wybieram</span>
+                <a href="problem-solver-design" data-uk-modal="target: #problem-solver-design" id="problem-solver-show" class="zoom-icon">
+                  <img src="./assets/img/zoom-button.png"/>
+                </a>
+              </div>
             </div>
-          </div>
+          </a>
           <hr class="hr">
           <div class="t-shirts__copy">
             <h2>Problem Solver</h2>
@@ -393,17 +410,18 @@
               <img src="./assets/img/button-close.png" class="button-close-zoom"/>
             </div>
           </div> 
-          <div class="t-shirt__single">
-            <img src="./assets/img/tshirt.png" class="t-shirts__piece"/>
-            <img src="./assets/img/11.jpg" class="t-shirts__design"/>
-            <div class="t-shirts__button">
-              <a href="#basic-human-needs-modal" data-uk-modal="target: #basic-human-needs-modal" id="basic-human-needs-button"><span>wybieram</span>
-              </a>
-              <a href="basic-human-needs-design" data-uk-modal="target: #basic-human-needs-design" id="basic-human-needs-show" class="zoom-icon">
-                <img src="./assets/img/zoom-button.png"/>
-              </a>
+          <a href="#basic-human-needs-modal" data-uk-modal="target: #basic-human-needs-modal" id="basic-human-needs-button">
+            <div class="t-shirt__single">
+              <img src="./assets/img/tshirt.png" class="t-shirts__piece"/>
+              <img src="./assets/img/11.jpg" class="t-shirts__design"/>
+              <div class="t-shirts__button">
+                <span>wybieram</span>
+                <a href="basic-human-needs-design" data-uk-modal="target: #basic-human-needs-design" id="basic-human-needs-show" class="zoom-icon">
+                  <img src="./assets/img/zoom-button.png"/>
+                </a>
+              </div>
             </div>
-          </div>
+          </a>
           <hr class="hr">
           <div class="t-shirts__copy">
             <h2>Basic Human Needs</h2>
@@ -463,17 +481,19 @@
               <img src="./assets/img/button-close.png" class="button-close-zoom"/>
             </div>
           </div> 
-          <div class="t-shirt__single">
-            <img src="./assets/img/tshirt.png" class="t-shirts__piece"/>
-            <img src="./assets/img/6.jpg" class="t-shirts__design"/>
-            <div class="t-shirts__button">
-              <a href="#programming-god-modal" data-uk-modal="target: #programming-god-modal" id="programming-god-button"><span>wybieram</span>
-              </a>
-              <a href="programming-god-design" data-uk-modal="target: #programming-god-design" id="programming-god-show" class="zoom-icon">
-                <img src="./assets/img/zoom-button.png"/>
-              </a>
+          <a href="#programming-god-modal" data-uk-modal="target: #programming-god-modal" id="programming-god-button">
+            <div class="t-shirt__single">
+              <img src="./assets/img/tshirt.png" class="t-shirts__piece"/>
+              <img src="./assets/img/6.jpg" class="t-shirts__design"/>
+              <div class="t-shirts__button">
+                
+                <span>wybieram</span>
+                <a href="programming-god-design" data-uk-modal="target: #programming-god-design" id="programming-god-show" class="zoom-icon">
+                  <img src="./assets/img/zoom-button.png"/>
+                </a>
+              </div>
             </div>
-          </div>
+          </a>
           <hr class="hr">
           <div class="t-shirts__copy">
             <h2>Programming God</h2>
@@ -533,17 +553,19 @@
               <img src="./assets/img/button-close.png" class="button-close-zoom"/>
             </div>
           </div> 
-          <div class="t-shirt__single">
-            <img src="./assets/img/tshirt.png" class="t-shirts__piece"/>
-            <img src="./assets/img/10.jpg" class="t-shirts__design"/>
-            <div class="t-shirts__button">
-              <a href="#play-safe-modal" data-uk-modal="target: #play-safe-modal" id="play-safe-button"><span>wybieram</span>
-              </a>
-              <a href="play-safe-design" data-uk-modal="target: #play-safe-design" id="play-safe-show" class="zoom-icon">
-                <img src="./assets/img/zoom-button.png"/>
-              </a>
+          <a href="#play-safe-modal" data-uk-modal="target: #play-safe-modal" id="play-safe-button">
+            <div class="t-shirt__single">
+              <img src="./assets/img/tshirt.png" class="t-shirts__piece"/>
+              <img src="./assets/img/10.jpg" class="t-shirts__design"/>
+              <div class="t-shirts__button">
+                
+                <span>wybieram</span>
+                <a href="play-safe-design" data-uk-modal="target: #play-safe-design" id="play-safe-show" class="zoom-icon">
+                  <img src="./assets/img/zoom-button.png"/>
+                </a>
+              </div>
             </div>
-          </div>
+          </a>
           <hr class="hr">
           <div class="t-shirts__copy">
             <h2>Play Safe</h2>
@@ -603,17 +625,19 @@
               <img src="./assets/img/button-close.png" class="button-close-zoom"/>
             </div>
           </div> 
-          <div class="t-shirt__single">
-            <img src="./assets/img/tshirt.png" class="t-shirts__piece"/>
-            <img src="./assets/img/4.jpg" class="t-shirts__design"/>
-            <div class="t-shirts__button">
-              <a href="#front-back-modal" data-uk-modal="target: #front-back-modal" id="front-back-button"><span>wybieram</span>
-              </a>
-              <a href="front-back-design" data-uk-modal="target: #front-back-design" id="front-back-show" class="zoom-icon">
-                <img src="./assets/img/zoom-button.png"/>
-              </a>
+          <a href="#front-back-modal" data-uk-modal="target: #front-back-modal" id="front-back-button">
+            <div class="t-shirt__single">
+              <img src="./assets/img/tshirt.png" class="t-shirts__piece"/>
+              <img src="./assets/img/4.jpg" class="t-shirts__design"/>
+              <div class="t-shirts__button">
+                
+                <span>wybieram</span>
+                <a href="front-back-design" data-uk-modal="target: #front-back-design" id="front-back-show" class="zoom-icon">
+                  <img src="./assets/img/zoom-button.png"/>
+                </a>
+              </div>
             </div>
-          </div>
+          </a>
           <hr class="hr">
           <div class="t-shirts__copy">
             <h2>Front-end vs Back-end</h2>
@@ -673,17 +697,19 @@
               <img src="./assets/img/button-close.png" class="button-close-zoom"/>
             </div>
           </div> 
-          <div class="t-shirt__single">
-            <img src="./assets/img/tshirt.png" class="t-shirts__piece"/>
-            <img src="./assets/img/7.jpg" class="t-shirts__design"/>
-            <div class="t-shirts__button">
-              <a href="#talk-to-me-modal" data-uk-modal="target: #talk-to-me-modal" id="talk-to-me-button"><span>wybieram</span>
-              </a>
-              <a href="talk-to-me-design" data-uk-modal="target: #talk-to-me-design" id="talk-to-me-show" class="zoom-icon">
-                <img src="./assets/img/zoom-button.png"/>
-              </a>
+          <a href="#talk-to-me-modal" data-uk-modal="target: #talk-to-me-modal" id="talk-to-me-button">
+            <div class="t-shirt__single">
+              <img src="./assets/img/tshirt.png" class="t-shirts__piece"/>
+              <img src="./assets/img/7.jpg" class="t-shirts__design"/>
+              <div class="t-shirts__button">
+                
+                <span>wybieram</span>
+                <a href="talk-to-me-design" data-uk-modal="target: #talk-to-me-design" id="talk-to-me-show" class="zoom-icon">
+                  <img src="./assets/img/zoom-button.png"/>
+                </a>
+              </div>
             </div>
-          </div>
+          </a>
           <hr class="hr">
           <div class="t-shirts__copy">
             <h2>Talk to Me</h2>
@@ -743,17 +769,19 @@
               <img src="./assets/img/button-close.png" class="button-close-zoom"/>
             </div>
           </div> 
-          <div class="t-shirt__single">
-            <img src="./assets/img/tshirt.png" class="t-shirts__piece"/>
-            <img src="./assets/img/12.jpg" class="t-shirts__design"/>
-            <div class="t-shirts__button">
-              <a href="#artful-coder-modal" data-uk-modal="target: #artful-coder-modal" id="artful-coder-button"><span>wybieram</span>
-              </a>
-              <a href="artful-coder-design" data-uk-modal="target: #artful-coder-design" id="artful-coder-show" class="zoom-icon">
-                <img src="./assets/img/zoom-button.png"/>
-              </a>
+          <a href="#artful-coder-modal" data-uk-modal="target: #artful-coder-modal" id="artful-coder-button">
+            <div class="t-shirt__single">
+              <img src="./assets/img/tshirt.png" class="t-shirts__piece"/>
+              <img src="./assets/img/12.jpg" class="t-shirts__design"/>
+              <div class="t-shirts__button">
+                
+                <span>wybieram</span>
+                <a href="artful-coder-design" data-uk-modal="target: #artful-coder-design" id="artful-coder-show" class="zoom-icon">
+                  <img src="./assets/img/zoom-button.png"/>
+                </a>
+              </div>
             </div>
-          </div>
+          </a>
           <hr class="hr">
           <div class="t-shirts__copy">
             <h2>Artful Coder</h2>
@@ -813,17 +841,19 @@
               <img src="./assets/img/button-close.png" class="button-close-zoom"/>
             </div>
           </div> 
-          <div class="t-shirt__single">
-            <img src="./assets/img/tshirt.png" class="t-shirts__piece"/>
-            <img src="./assets/img/2.jpg" class="t-shirts__design"/>
-            <div class="t-shirts__button">
-              <a href="#coding-state-modal" data-uk-modal="target: #coding-state-modal" id="coding-state-button"><span>wybieram</span>
-              </a>
-              <a href="coding-state-design" data-uk-modal="target: #coding-state-design" id="coding-state-show" class="zoom-icon">
-                <img src="./assets/img/zoom-button.png"/>
-              </a>
+          <a href="#coding-state-modal" data-uk-modal="target: #coding-state-modal" id="coding-state-button">
+            <div class="t-shirt__single">
+              <img src="./assets/img/tshirt.png" class="t-shirts__piece"/>
+              <img src="./assets/img/2.jpg" class="t-shirts__design"/>
+              <div class="t-shirts__button">
+               
+                <span>wybieram</span>
+                <a href="coding-state-design" data-uk-modal="target: #coding-state-design" id="coding-state-show" class="zoom-icon">
+                  <img src="./assets/img/zoom-button.png"/>
+                </a>
+              </div>
             </div>
-          </div>
+          </a>
           <hr class="hr">
           <div class="t-shirts__copy">
             <h2>Coding State of Mind</h2>
@@ -883,17 +913,18 @@
               <img src="./assets/img/button-close.png" class="button-close-zoom"/>
             </div>
           </div> 
-          <div class="t-shirt__single">
-            <img src="./assets/img/tshirt.png" class="t-shirts__piece"/>
-            <img src="./assets/img/8.jpg" class="t-shirts__design"/>
-            <div class="t-shirts__button">
-              <a href="#codeholic-modal" data-uk-modal="target: #codeholic-modal" id="codeholic-button"><span>wybieram</span>
-              </a>
-              <a href="codeholic-design" data-uk-modal="target: #codeholic-design" id="codeholic-show" class="zoom-icon">
-                <img src="./assets/img/zoom-button.png"/>
-              </a>
+          <a href="#codeholic-modal" data-uk-modal="target: #codeholic-modal" id="codeholic-button">
+            <div class="t-shirt__single">
+              <img src="./assets/img/tshirt.png" class="t-shirts__piece"/>
+              <img src="./assets/img/8.jpg" class="t-shirts__design"/>
+              <div class="t-shirts__button">
+                <span>wybieram</span>
+                <a href="codeholic-design" data-uk-modal="target: #codeholic-design" id="codeholic-show" class="zoom-icon">
+                  <img src="./assets/img/zoom-button.png"/>
+                </a>
+              </div>
             </div>
-          </div>
+          </a>
           <hr class="hr">
           <div class="t-shirts__copy">
             <h2>Codeholic</h2>
@@ -901,34 +932,47 @@
           </div>
         </div>
       </div>
-      <div class="main-page__header">
+      <div class="main-page__header designers">
         <h1>Designers</h1>
       </div>
     </div>
-    <div class="designers__container uk-flex uk-flex-middle uk-flex-center uk-flex-space-between">
-
-      <div class="designers__kula uk-flex">
-        <div class="kula__photo">
-          <img src="./assets/img/lis_kula.png"/>
-        </div>
-        <div class="kula__copy">
-          <h3>Lis Kula</h3>
-          <hr class="hr">
-          <p>Lorem ipsum dolor sit amet, per eu saperet fierent invidunt. In sumo adipisci vel, te etiam putent praesent mei, volutpat scribentur sed eu. Eum cu duis illud satus.</p>
-        </div>
-      </div>
-
-      <div class="designers__miskacz uk-flex">
-        <div class="miskacz__copy">
-          <h3>Miskacz</h3>
-          <hr class="hr">
-          <p>Lorem ipsum dolor sit amet, per eu saperet fierent invidunt. In sumo adipisci vel, te etiam putent praesent mei, volutpat scribentur sed eu. Eum cu duis illud satus.</p>
-        </div>
-        <div class="miskacz__photo">
-          <img src="./assets/img/miskacz.png"/>
+    <div class="designers__container uk-grid">
+      <div class="uk-width-medium-1-2 uk-width-small-1-1">
+        <div class="uk-grid">
+          <div class="uk-width-1-2">
+            <div class="designers__kula">
+              <img src="./assets/img/kula-background.png" class="kula__background"/>
+              <div class="kula__photo">
+              </div>
+            </div>
+          </div>
+          <div class="uk-width-1-2">
+            <div class="kula__copy">
+              <h3>Lis Kula</h3>
+              <hr class="hr">
+              <p>Rysownik, autor okładek muzycznych, murali i mniej lub bardziej komercyjnych ilustracji. W swoich pracach kładzie nacisk na detale i naćkane kompozycje. Pracował między innymi nad projektami dla 20th Century Fox, Nike, Converse, Levi’s czy Vice. Lubi kreskówki, komiksy i zwierzęta. Prywatnie miły chłopak.</p>
+            </div>
+          </div>
         </div>
       </div>
-
+      <div class="uk-width-medium-1-2 uk-width-small-1-1">
+        <div class="uk-grid">
+          <div class="uk-width-1-2">
+            <div class="miskacz__copy">
+              <h3>Miskacz</h3>
+              <hr class="hr">
+              <p>Artysta, grafik, tatuażysta. Tworzy w oryginalnym stylu będącym połączeniem neotraditional ze stylem cartoon. Grube kontury, wyraźne kreski i żywe kolory to jego specjalność. Miskacz wielokrotnie zdobywa wysokie miejsca i wyróżnienia na konwentach tatutażu, choćby ostatnio w Warszawie (październik 2016) i w Krakowie (czerwiec 2016).</p>
+            </div>
+          </div>
+          <div class="uk-width-1-2">
+            <div class="designers__miskacz">
+              <img src="./assets/img/miskacz-background.png" class="miskacz__background"/>
+              <div class="miskacz__photo">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <footer>

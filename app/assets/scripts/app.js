@@ -18,6 +18,13 @@ $(document).ready(function() {
       UIkit.modal(modalZoom).hide();
     })
   })
+
+  $('*[class^="lang-version-"]').click(function() {
+    $(".lang-version-pl").toggleClass("active");
+    $(".lang-version-en").toggleClass("active");
+  })
+
+  inputFileNamePreviewInit();
 });
 
 function selectTshirt() {
@@ -30,6 +37,13 @@ function selectTshirt() {
       
     tshirt.attr('src', src);
     button.toggleClass("active");
+  });
+}
+
+function inputFileNamePreviewInit() {
+  $('[id^="uploadCV-"]').change(function (e) {
+    var $this = $(this);
+    $this.next().html($this.val().split('\\').pop());
   });
 }
 

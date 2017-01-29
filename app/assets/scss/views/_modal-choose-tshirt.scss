@@ -25,7 +25,7 @@
   position: absolute;
   top: -20px;
   right: -20px;
-   cursor: pointer;
+  cursor: pointer;
   @include r(phone-max) {
     top: 20px;
     right: 20px;
@@ -128,3 +128,49 @@
   color: $green;
   margin: 0;
 }
+
+.checkbox-container {
+  padding: 0 18% 0 5%;
+   @include r(phone-max) {
+    padding-right: 9%;
+  }
+}
+
+.tooltip {
+  position: relative;
+  background-image: url('../img/question.svg');
+  height: 30px;
+  width: 30px;
+  background-repeat: no-repeat;
+  top: 19px;
+  left: 210px;
+  &:hover {
+    .tooltiptext {
+      visibility: visible;
+    }
+  }
+}
+
+.tooltiptext {
+  visibility: hidden;
+  width: 200px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  padding: 60px 20px;
+  border: 2px solid $green;
+  left: -250px;
+  top: -145px;
+  font-family: 'Raleway-Thin';
+  font-size: 1.7rem;
+  &:after {
+    content: url('../img/tooltip.png');
+    position: absolute;
+    left: 240px;
+    top: 148px;
+  }
+}
+
