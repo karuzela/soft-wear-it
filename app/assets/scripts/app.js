@@ -24,8 +24,37 @@ $(document).ready(function() {
     $(".lang-version-en").toggleClass("active");
   })
 
+  $(".submit").on("click", function() {
+    var _this = $(this);
+    console.log(_this.find('select'));
+    var form = _this.parents('form');
+    var formData = new FormData(form[0]);
+
+    $.ajax({
+      url: 'upload.php',
+      type: 'POST',
+      data: formData,
+      async: false,
+      beforeSubmit: function(){
+        $('.errors').html('');
+      },
+      success: function (data) {
+        if(data.status == 1){
+          alert('success');
+        } else {
+          $('.errors').html(data.errors);
+        }
+      },
+      cache: false,
+      contentType: false,
+      processData: false
+    });
+    return false;
+  });
+
   inputFileNamePreviewInit();
 });
+
 
 function selectTshirt() {
   $(".t-shirt__single").hover(function() {

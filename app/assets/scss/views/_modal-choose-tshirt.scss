@@ -137,12 +137,12 @@
 }
 
 .tooltip {
-  position: relative;
+  position: absolute;
   background-image: url('../img/question.svg');
   height: 30px;
   width: 30px;
   background-repeat: no-repeat;
-  top: 19px;
+  top: 14px;
   left: 210px;
   &:hover {
     .tooltiptext {
