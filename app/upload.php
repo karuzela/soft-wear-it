@@ -28,18 +28,18 @@
   } 
 
   if(empty($files['cv']) || $files['cv']['error']){
-    $resp['errors'] = ['The <span class="gump-field">CV</span> jest wymagane.'];
+    $resp['errors'] = ['The <span class="gump-field">CV</span> pole obowiązkowe.'];
     render($resp);
   }
 
   if($files['cv']['type'] != 'application/pdf'){
-    $resp['errors'] = ['The <span class="gump-field">CV</span>musi być pdfem'];
+    $resp['errors'] = ['The <span class="gump-field">CV</span> plik musi być w formacie PDF'];
     render($resp);
   }
 
 
   if($files['cv']['size'] > 5242880){
-    $resp['errors'] = ['The <span class="gump-field">CV</span> moze miec maksymalnie 5mb'];
+    $resp['errors'] = ['The <span class="gump-field">CV</span> plik może mieć maksymalnie 5MB'];
     render($resp);
   }
 
@@ -67,7 +67,7 @@
   $mail->AltBody = 'Potwierdzamy dokonanie zgłoszenia';
   $mail->send();
 
-  // email do opearatora
+  // mail with collected data
 
   $mail2 = new PHPMailer;
   $mail2->isSendmail();

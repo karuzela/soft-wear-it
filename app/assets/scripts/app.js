@@ -20,8 +20,7 @@ $(document).ready(function() {
   })
 
   $('*[class^="lang-version-"]').click(function() {
-    $(".lang-version-pl").toggleClass("active");
-    $(".lang-version-en").toggleClass("active");
+    $('*[class^="lang-version-"]').toggleClass("active");
   })
 
   $(".submit").on("click", function() {
