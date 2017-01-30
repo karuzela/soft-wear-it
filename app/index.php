@@ -39,7 +39,7 @@
           </p>
         </div>
         <div class="content__instructions-container">
-          <div class="content__instruction">
+          <div class="content__instruction instruction__number1">
             <p>WYBIERZ T-SHIRT I ZUPLOADUJ CV</p>
             <div class="instruction__number">
               <span>1</span>

@@ -20,6 +20,7 @@
   background-position: bottom center; 
   background-size: contain;
   height: inherit;
+  position: relative;
   @include r(phone-max) {
     background-image: none;
   }
@@ -55,7 +56,7 @@
     }
     @include r(large-screen-min) {
       font-size: 3rem;
-      padding-top: 1rem;
+      padding-top: 1.8rem;
     }
     span {
       color: $green;
@@ -174,6 +175,9 @@
         font-size: 2.3rem;
         color: #1a1a1a;
       }
+    }
+    .instruction__number2 {
+      top: 13px;
     }
     .instruction__number2 {
       top: 11px;
