@@ -14,10 +14,13 @@
 
   $gump->validation_rules(array(
     'email' => 'required|valid_email',
-      'akcept regulaminu' => 'required',
-      'rozmiar t-shirtu' => 'required',
+      'agreement' => 'required',
+      'size' => 'required',
       'type' => 'required'
   ));
+
+  $errors = str_replace('size', 'rozmiar t-shirtu', $errors);
+  $errors = str_replace('agreement', 'akcept regulaminu', $errors);
 
 
   $validated_data = $gump->run($post);
@@ -50,10 +53,10 @@
   // send confirmation mail to user
   // send mail with collected data
 
-  $domain = 'http://localhost/soft-wear-it/app/';
-  $fromEmail = 'soft@wear.it';
+  $domain = 'softwear.it';
+  $fromEmail = 'do-not-reply@softwear.it';
   $fromName = 'Soft Wear It';
-  $operatorEmail = 'monika@krauze.com';
+  $operatorEmail = 'softwearit@connectis.pl';
   $fileUrl = $domain . $newFileName;
 
   // confirmation mail
