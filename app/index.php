@@ -39,9 +39,9 @@
           </p>
         </div>
         <div class="content__instructions-container">
-          <div class="content__instruction instruction__number1">
+          <div class="content__instruction">
             <p>WYBIERZ T-SHIRT I ZUPLOADUJ CV</p>
-            <div class="instruction__number">
+            <div class="instruction__number instruction__number1">
               <span>1</span>
             </div>
           </div>
