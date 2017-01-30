@@ -80,6 +80,9 @@
     @include r(tablet-max) {
       right: -1%;
     }
+    @include r(large-screen-min) {
+      right: -350px;
+    }
     span {
       font-size: 1.3rem;
       font-family: 'Raleway-Thin';
