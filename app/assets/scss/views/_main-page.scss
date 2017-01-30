@@ -33,10 +33,13 @@
 }
 
 .main-page__header.designers {
-  margin: 10% 0 -10% 0;
+  margin: 10% 0 -15% 0;
   padding: 0;
   @include r(phone-max) {
     margin: 10% 0 0 0;
+  }
+  @include r(tablet-max) {
+    margin-bottom: -10%;
   }
 }
 

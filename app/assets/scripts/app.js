@@ -25,7 +25,6 @@ $(document).ready(function() {
 
   $(".submit").on("click", function() {
     var _this = $(this);
-    console.log(_this.find('select'));
     var form = _this.parents('form');
     var formData = new FormData(form[0]);
 
