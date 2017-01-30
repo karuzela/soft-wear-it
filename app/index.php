@@ -61,7 +61,6 @@
       </div>
     </div>
   </div>
-
   <div class="main-page">
     <div class="main-page__content uk-flex uk-flex-column uk-flex-center">
       <div class="main-page__header">

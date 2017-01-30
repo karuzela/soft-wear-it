@@ -9,6 +9,9 @@
   @include r(phone-max) {
     padding: 0;
   }
+  @media screen and (max-height: 600px) {
+    height: 600px;
+  }
 }
 
 .intro-page__additional-background {
@@ -122,7 +125,6 @@
 }
 
 .content__copy-container {
-  margin-top: -60px;
   @include r(phone-max) {
     margin-top: 80px;
   }
