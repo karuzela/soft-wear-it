@@ -14,8 +14,8 @@
 
   $gump->validation_rules(array(
     'email' => 'required|valid_email',
-      'agreement' => 'required',
-      'tshirt-size' => 'required',
+      'akcept regulaminu' => 'required',
+      'rozmiar t-shirtu' => 'required',
       'type' => 'required'
   ));
 
@@ -28,18 +28,18 @@
   } 
 
   if(empty($files['cv']) || $files['cv']['error']){
-    $resp['errors'] = ['The <span class="gump-field">CV</span> pole obowiązkowe.'];
+    $resp['errors'] = ['The <p class="gump-field">CV</p> pole obowiązkowe.'];
     render($resp);
   }
 
   if($files['cv']['type'] != 'application/pdf'){
-    $resp['errors'] = ['The <span class="gump-field">CV</span> plik musi być w formacie PDF'];
+    $resp['errors'] = ['<p class="gump-field">CV</p> musi być w formacie PDF</p>'];
     render($resp);
   }
 
 
   if($files['cv']['size'] > 5242880){
-    $resp['errors'] = ['The <span class="gump-field">CV</span> plik może mieć maksymalnie 5MB'];
+    $resp['errors'] = ['<p class="gump-field">CV</p> może mieć maksymalnie 5MB'];
     render($resp);
   }
 
@@ -63,18 +63,28 @@
   $mail->setFrom($fromEmail, $fromName);
   $mail->addAddress($post['email']);
   $mail->Subject = "Potwierdzenie zgłoszenia";
-  $mail->msgHTML('<p>Dziękujemy za zgłoszenie. Niebawem otrzymasz test, a gdy go rozwiażesz, koszulka będzie już Twoja!</p>');
+  $mail->msgHTML('<p>Dziękujemy za zgłoszenie. Niebawem otrzymasz test, a gdy go rozwiążesz, koszulka będzie Twoja!</p>');
   $mail->AltBody = 'Potwierdzamy dokonanie zgłoszenia';
   $mail->send();
 
   // mail with collected data
+
+
+  $html = '<p> Następująca osoba wysłała zgłoszenie</p>
+           Link do CV: <a href="' . $fileUrl  . '">' . $fileUrl . '</a><br>
+           Rozmiar koszulki: ' . $post['rozmiar koszulki'] . '<br>
+           Rodzaj koszulki: ' . $post['type'] . '<br>
+           Email: ' . $post['email'] . '<br>
+           Zgoda: ' . $post['akcept regulaminu'] . '<br>
+  </p>';
+  
 
   $mail2 = new PHPMailer;
   $mail2->isSendmail();
   $mail2->setFrom($fromEmail, $fromName);
   $mail2->addAddress($operatorEmail);
   $mail2->Subject = "Dane zgłoszeniowe uczestnika akcji";
-  $mail2->msgHTML('<p> Następująca osoba wysłała zgłoszenie <a href=' . $fileUrl  . '>' . $fileUrl . '</a></p>');
+  $mail2->msgHTML($html);
   $mail2->send();
 
   if($mail->send() && $mail2->send()){

@@ -487,10 +487,10 @@ class GUMP
                     $resp[] = "There is no validation rule for <span class=\"$field_class\">$field</span>";
                     break;
                 case 'validate_required' :
-                    $resp[] = "The <span class=\"$field_class\">$field</span> field is required";
+                    $resp[] = "<span class=\"$field_class\">$field</span> jest wymagany";
                     break;
                 case 'validate_valid_email':
-                    $resp[] = "The <span class=\"$field_class\">$field</span> field is required to be a valid email address";
+                    $resp[] = "<span class=\"$field_class\">$field</span> musi mieć poprawny format";
                     break;
                 case 'validate_max_len':
                     $resp[] = "The <span class=\"$field_class\">$field</span> field needs to be $param or shorter in length";
@@ -578,16 +578,12 @@ class GUMP
             }
         }
 
-        if (!$convert_to_string) {
-            return $resp;
-        } else {
-            $buffer = '';
+        $buffer = '';
             foreach ($resp as $s) {
-                $buffer .= "<span class=\"$error_class\">$s</span>";
+                $buffer .= "<p class=\"$error_class\">$s</p>";
             }
 
             return $buffer;
-        }
     }
 
     /**
@@ -619,10 +615,10 @@ class GUMP
                     $resp[$field] = "There is no validation rule for $field";
                     break;
                 case 'validate_required':
-                    $resp[$field] = "The $field field is required";
+                    $resp[$field] = "$field jest wymagany";
                     break;
                 case 'validate_valid_email':
-                    $resp[$field] = "The $field field is required to be a valid email address";
+                    $resp[$field] = "$field musi mieć poprawny format";
                     break;
                 case 'validate_max_len':
                     $resp[$field] = "The $field field needs to be $param or shorter in length";

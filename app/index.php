@@ -41,19 +41,19 @@
         <div class="content__instructions-container">
           <div class="content__instruction">
             <p>WYBIERZ T-SHIRT I ZUPLOADUJ CV</p>
-            <div class=instruction__number>
+            <div class="instruction__number">
               <span>1</span>
             </div>
           </div>
           <div class="content__instruction">
             <p>ROZWIĄŻ KRÓTKI TEST, KTÓRY DOSTANIESZ NA MAILA</p>
-            <div class=instruction__number>
+            <div class="instruction__number instruction__number2">
               <span>2</span>
             </div>
           </div>
           <div class="content__instruction">
             <p>ODBIERZ T-SHIRT</p>
-            <div class=instruction__number>
+            <div class="instruction__number">
               <span>3</span>
             </div>
           </div>
@@ -73,57 +73,62 @@
           <div class="t-shirts__piece-container uk-flex uk-flex-center uk-flex-column uk-flex-middle">
           <!-- modal with t-shirt selection -->
             <div id="<?php echo $shirt['name'];?>-modal" class="uk-modal modal-choose-t-shirt__container" uk-modal>
-              <div class="uk-modal-dialog uk-modal-body modal-choose-tshirt">
-                <img src="./assets/img/button-close.png" class="button-close-tshirt"/>
-                <div class="uk-grid">
-                  <div class="uk-width-medium-1-2 uk-width-1-1">
-                    <div class="t-shirt__single">
-                      <div class="t-shirt__white--modal uk-flex uk-flex-middle uk-flex-center">
-                        <div class="t-shirt__design--modal <?php echo $shirt['class'];?>">
+              <form method="post" enctype="multipart/form-data">
+
+                <div class="uk-modal-dialog uk-modal-body modal-choose-tshirt">
+                  <img src="./assets/img/button-close.png" class="button-close-tshirt"/>
+                  <div class="modal-padding">
+                    <div class="uk-grid">
+                      <div class="uk-width-medium-1-2 uk-width-1-1">
+                        <div class="t-shirt__single">
+                          <div class="t-shirt__white--modal uk-flex uk-flex-middle uk-flex-center">
+                            <div class="t-shirt__design--modal <?php echo $shirt['class'];?>">
+                            </div>
+                          </div>
                         </div>
+                      </div>
+                      <div class="modal-form-container uk-width-medium-1-2 uk-width-1-1">
+                        <h1 class="modal-header"><?php echo $shirt['name'];?></h1>
+                        <h2 class="design-by"><?php echo $shirt['author'];?></h2>
+                        
+                        <input type="hidden" name="type" value="<?php echo $shirt['name'];?>"/>
+                          <div class="modal-form__field">
+                            <select name="rozmiar t-shirtu">
+                              <option value="S">Wybierz rozmiar S</option>
+                              <option value="M">Wybierz rozmiar M</option>
+                              <option value="L">Wybierz rozmiar L</option>
+                              <option value="XL">Wybierz rozmiar XL</option>
+                            </select> 
+                          </div>
+                          <div class="modal-form__field">
+                            <input name="email" type="email" pattern="[^ @]*@[^ @]*" placeholder="Podaj email"/>
+                          </div>
+                          <div class="modal-form__field modal-form__upload">
+                            <input type="file" name="cv" id="uploadCV-<?php echo $shirt['class'];?>"/>
+                            <label id="label__uploadCV-<?php echo $shirt['class'];?>" for="uploadCV-<?php echo $shirt['class'];?>">Załącz CV</label>
+                            <div class="tooltip">
+                              <span class="tooltiptext">Zuploaduj swoje CV do naszej bazy specjalistów IT. W odpowiedzi wyślemy do Ciebie krótki test, po rozwiązaniu którego otrzymasz wybrany przez siebie T-shirt.</span>
+                            </div>
+                          </div>
+                          <div class="modal-form__field">
+                            <button class="modal__button submit">Wyślij</button>
+                          </div>
+                          <div class="errors">
+                          </div>
                       </div>
                     </div>
                   </div>
-                  <form method="post" enctype="multipart/form-data">
-                    <div class="modal-form-container uk-width-medium-1-2 uk-width-1-1">
-                      <h1 class="modal-header"><?php echo $shirt['name'];?></h1>
-                      <h2 class="design-by"><?php echo $shirt['author'];?></h2>
-                      
-                      <input type="hidden" name="type" value="<?php echo $shirt['name'];?>"/>
-                        <div class="modal-form__field">
-                          <select name="tshirt-size">
-                            <option value="S">Wybierz rozmiar S</option>
-                            <option value="M">Wybierz rozmiar M</option>
-                            <option value="L">Wybierz rozmiar L</option>
-                            <option value="XL">Wybierz rozmiar XL</option>
-                          </select> 
-                        </div>
-                        <div class="modal-form__field">
-                          <input name="email" type="email" pattern="[^ @]*@[^ @]*" placeholder="Podaj email"/>
-                        </div>
-                        <div class="modal-form__field modal-form__upload">
-                          <input type="file" name="cv" id="uploadCV-<?php echo $shirt['class'];?>"/>
-                          <label id="label__uploadCV-<?php echo $shirt['class'];?>" for="uploadCV-<?php echo $shirt['class'];?>">Załącz CV</label>
-                          <div class="tooltip">
-                            <span class="tooltiptext">Zuploaduj swoje CV do naszej bazy specjalistów IT. W odpowiedzi wyślemy do Ciebie krótki test, po rozwiązaniu którego otrzymasz wybrany przez siebie T-shirt.</span>
-                          </div>
-                        </div>
-                        <div class="modal-form__field">
-                          <button class="modal__button submit">Wyślij</button>
-                        </div>
-                        <div class="errors"></div>
-                    </div>
-                  </form>
-                </div>
-                <div class="uk-grid">
-                  <div class="uk-width-1-1">
-                    <div class="checkbox-container">
-                      <input type="checkbox" id="checkbox-<?php echo $shirt['class'];?>" name="agreement" />
-                      <label for="checkbox-<?php echo $shirt['class'];?>">Wyrażam zgodę na przetwarzanie moich danych osobowych przez Connectis sp. z o. o. (Al. Jerozolimskie 96, 00-807 Warszawa) oraz Asistera Poland sp. z o. o. (ul. Nowogrodzka 50/515, 00-695 Warszawa), współadministratorów zbioru danych osobowych, w celach rekrutacyjnych. Współadministratorzy zapewniają dostęp do danych osobowych oraz umożliwiają ich poprawianie. Podanie danych osobowych jest dobrowolne. Oświadczam, że zostałem poinformowany o uprawnieniach przysługujących mi na podstawie ustawy z dnia 29 sierpnia 1997 r. o ochronie danych osobowych (tekst jednolity: Dz.U. z 2015 r., poz. 2135 z późn. zm.) oraz że wgląd do moich danych mogą posiadać potencjalni pracodawcy będący klientami Connectis sp. z o. o. i Asistera sp. z o. o.</label>
+                  <div class="uk-grid">
+                    <div class="uk-width-1-1">
+                      <div class="checkbox-container">
+                        <input type="checkbox" id="checkbox-<?php echo $shirt['class'];?>" name="akcept regulaminu" />
+                        <label for="checkbox-<?php echo $shirt['class'];?>">Wyrażam zgodę na przetwarzanie moich danych osobowych przez Connectis sp. z o. o. (Al. Jerozolimskie 96, 00-807 Warszawa) oraz Asistera Poland sp. z o. o. (ul. Nowogrodzka 50/515, 00-695 Warszawa), współadministratorów zbioru danych osobowych, w celach rekrutacyjnych. Współadministratorzy zapewniają dostęp do danych osobowych oraz umożliwiają ich poprawianie. Podanie danych osobowych jest dobrowolne. Oświadczam, że zostałem poinformowany o uprawnieniach przysługujących mi na podstawie ustawy z dnia 29 sierpnia 1997 r. o ochronie danych osobowych (tekst jednolity: Dz.U. z 2015 r., poz. 2135 z późn. zm.) oraz że wgląd do moich danych mogą posiadać potencjalni pracodawcy będący klientami Connectis sp. z o. o. i Asistera sp. z o. o.</label>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
+              </form>
+              
             </div>
             <!-- modal with design zoom -->
             <div id="<?php echo $shirt['class'];?>-design" class="uk-modal modal-zoom__container" uk-modal>
@@ -153,7 +158,7 @@
         <?php endforeach;?>
 
       </div>
-      <div class="main-page__header">
+      <div class="main-page__header designers">
         <h1>Designers</h1>
       </div>
     </div>
