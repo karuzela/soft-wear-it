@@ -37,6 +37,7 @@ $(document).ready(function() {
         $('.errors').html('');
       },
       success: function (data) {
+        $('.errors').html('');
         if(data.status == 1){
           alert('success');
         } else {

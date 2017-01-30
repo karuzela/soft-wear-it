@@ -93,7 +93,7 @@
                         
                         <input type="hidden" name="type" value="<?php echo $shirt['name'];?>"/>
                           <div class="modal-form__field">
-                            <select name="rozmiar t-shirtu">
+                            <select name="size">
                               <option value="S">Wybierz rozmiar S</option>
                               <option value="M">Wybierz rozmiar M</option>
                               <option value="L">Wybierz rozmiar L</option>
@@ -121,7 +121,7 @@
                   <div class="uk-grid">
                     <div class="uk-width-1-1">
                       <div class="checkbox-container">
-                        <input type="checkbox" id="checkbox-<?php echo $shirt['class'];?>" name="akcept regulaminu" />
+                        <input type="checkbox" id="checkbox-<?php echo $shirt['class'];?>" name="agreement" />
                         <label for="checkbox-<?php echo $shirt['class'];?>">Wyrażam zgodę na przetwarzanie moich danych osobowych przez Connectis sp. z o. o.</label>
                       </div>
                     </div>
