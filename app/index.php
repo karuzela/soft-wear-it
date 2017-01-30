@@ -93,7 +93,7 @@
                         
                         <input type="hidden" name="type" value="<?php echo $shirt['name'];?>"/>
                           <div class="modal-form__field">
-                            <select name="rozmiar t-shirtu">
+                            <select name="size">
                               <option value="S">Wybierz rozmiar S</option>
                               <option value="M">Wybierz rozmiar M</option>
                               <option value="L">Wybierz rozmiar L</option>
@@ -121,7 +121,7 @@
                   <div class="uk-grid">
                     <div class="uk-width-1-1">
                       <div class="checkbox-container">
-                        <input type="checkbox" id="checkbox-<?php echo $shirt['class'];?>" name="akcept regulaminu" />
+                        <input type="checkbox" id="checkbox-<?php echo $shirt['class'];?>" name="agreement" />
                         <label for="checkbox-<?php echo $shirt['class'];?>">Wyrażam zgodę na przetwarzanie moich danych osobowych przez Connectis sp. z o. o. (Al. Jerozolimskie 96, 00-807 Warszawa) oraz Asistera Poland sp. z o. o. (ul. Nowogrodzka 50/515, 00-695 Warszawa), współadministratorów zbioru danych osobowych, w celach rekrutacyjnych. Współadministratorzy zapewniają dostęp do danych osobowych oraz umożliwiają ich poprawianie. Podanie danych osobowych jest dobrowolne. Oświadczam, że zostałem poinformowany o uprawnieniach przysługujących mi na podstawie ustawy z dnia 29 sierpnia 1997 r. o ochronie danych osobowych (tekst jednolity: Dz.U. z 2015 r., poz. 2135 z późn. zm.) oraz że wgląd do moich danych mogą posiadać potencjalni pracodawcy będący klientami Connectis sp. z o. o. i Asistera sp. z o. o.</label>
                       </div>
                     </div>
