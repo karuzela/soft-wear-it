@@ -53,8 +53,7 @@
   // send mail with collected data
 
   $domain = 'htttp://softwear.it/';
-  // $operatorEmail = 'softwearit@connectis.pl';
-  $operatorEmail = 'do-not-reply@softwear.it';
+  $operatorEmail = 'softwearit@connectis.pl';
   $fileUrl = $domain . $newFileName;
 
 

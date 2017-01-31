@@ -45,7 +45,7 @@ $(document).ready(function() {
       success: function (data) {
         $('.errors').html('');
         if(data.status == 1){
-          alert('success');
+          alert('Dziękujemy za zgłoszenie!');
         } else {
           $('.errors').html(data.errors);
         }
