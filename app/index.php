@@ -14,7 +14,7 @@
   <script src="https://use.fontawesome.com/e126d2c437.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.4/js/standalone/selectize.min.js"></script>
   <script src="./assets/scripts/app.js"></script>
-  <title>Soft Wear It</title>
+  <title>SOFT WEAR IT</title>
   <meta name="keywords" content="t-shirts, geek, zabawne koszulki, design, branża IT">
   <meta name="description" content="Jesteś specjalistą IT? Wykorzystaj to, żeby dostać wyjątkowy T-shirt!">
 </head>
@@ -64,7 +64,7 @@
   <div class="main-page">
     <div class="main-page__content uk-flex uk-flex-column uk-flex-center">
       <div class="main-page__header">
-        <h1>wybierz koszulkę</h1>
+        <h1>wybierz t-shirt</h1>
       </div>
       <div class="t-shirts__container uk-flex uk-flex-center uk-flex-wrap">
 
@@ -100,7 +100,7 @@
                             </select> 
                           </div>
                           <div class="modal-form__field">
-                            <input name="email" type="email" pattern="[^ @]*@[^ @]*" placeholder="Podaj email"/>
+                            <input name="email" type="email" pattern="[^ @]*@[^ @]*" placeholder="Podaj e-mail"/>
                           </div>
                           <div class="modal-form__field modal-form__upload">
                             <input type="file" name="cv" id="uploadCV-<?php echo $shirt['class'];?>"/>
@@ -121,7 +121,8 @@
                     <div class="uk-width-1-1">
                       <div class="checkbox-container">
                         <input type="checkbox" id="checkbox-<?php echo $shirt['class'];?>" name="agreement" />
-                        <label for="checkbox-<?php echo $shirt['class'];?>">Wyrażam zgodę na przetwarzanie moich danych osobowych przez Connectis sp. z o. o.</label>
+                        <label for="checkbox-<?php echo $shirt['class'];?>">Wyrażam zgodę na przetwarzanie moich danych osobowych przez Connectis sp. z o. o. (Al. Jerozolimskie 96 00-807 Warszawa) </label>
+                        <span class="open-checkbox">czytaj całość</span>
                       </div>
                     </div>
                   </div>
@@ -202,7 +203,7 @@
     </div>
 
     <footer>
-      <p> footer </p>
+      <p> CONNECTIS_ | SOFT WEAR IT | <span><a href="mailto:softwearit@connectis.pl" target="_top">softwearit@connectis.pl</a></span></p>
     </footer>
   </div>
 </body>

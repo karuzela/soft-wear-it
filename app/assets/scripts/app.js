@@ -8,7 +8,13 @@ $(document).ready(function() {
     UIkit.modal(modalChooseTshirt, {center:true}).show();
     $(".button-close-tshirt").on("click", function() {
       UIkit.modal(modalChooseTshirt).hide();
+      $('.checkbox-container').find("label").html("Wyrażam zgodę na przetwarzanie moich danych osobowych przez Connectis sp. z o. o. (Al. Jerozolimskie 96, 00-807 Warszawa)");
+      $('.checkbox-container').find("span").show();
     })
+    $(".open-checkbox").click(function() {
+      $('.checkbox-container').find("label").html("Wyrażam zgodę na przetwarzanie moich danych osobowych przez Connectis sp. z o. o. (Al. Jerozolimskie 96, 00-807 Warszawa) oraz Asistera Poland sp. z o. o. (ul. Nowogrodzka 50/515, 00-695 Warszawa), współadministratorów zbioru danych osobowych, w celach rekrutacyjnych. Współadministratorzy zapewniają dostęp do danych osobowych oraz umożliwiają ich poprawianie. Podanie danych osobowych jest dobrowolne. Oświadczam, że zostałem poinformowany o uprawnieniach przysługujących mi na podstawie ustawy z dnia 29 sierpnia 1997 r. o ochronie danych osobowych (tekst jednolity: Dz.U. z 2015 r., poz. 2135 z późn. zm.) oraz że wgląd do moich danych mogą posiadać potencjalni pracodawcy będący klientami Connectis sp. z o. o. i Asistera sp. z o. o.");
+      $('.checkbox-container').find("span").hide();
+    });
   })
 
   $('[id$="-show"]').on("click", function() {
@@ -52,12 +58,6 @@ $(document).ready(function() {
   });
 
   inputFileNamePreviewInit();
-
-  $('.checkbox-container').find("label").click(function() {
-    $('.checkbox-container').find("label").html("Wyrażam zgodę na przetwarzanie moich danych osobowych przez Connectis sp. z o. o. (Al. Jerozolimskie 96, 00-807 Warszawa) oraz Asistera Poland sp. z o. o. (ul. Nowogrodzka 50/515, 00-695 Warszawa), współadministratorów zbioru danych osobowych, w celach rekrutacyjnych. Współadministratorzy zapewniają dostęp do danych osobowych oraz umożliwiają ich poprawianie. Podanie danych osobowych jest dobrowolne. Oświadczam, że zostałem poinformowany o uprawnieniach przysługujących mi na podstawie ustawy z dnia 29 sierpnia 1997 r. o ochronie danych osobowych (tekst jednolity: Dz.U. z 2015 r., poz. 2135 z późn. zm.) oraz że wgląd do moich danych mogą posiadać potencjalni pracodawcy będący klientami Connectis sp. z o. o. i Asistera sp. z o. o.");
-  });
-
-  $('#fullpage').fullpage();
 });
 
 
