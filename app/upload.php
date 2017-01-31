@@ -2,12 +2,11 @@
   init();
 
   include_once('library/Validators.php');
-  include_once('library/PHPMailer.php');
-  include_once('library/smtp.php');
+
+  require 'vendor/autoload.php';
 
   $gump = new GUMP();
   $resp = ['status'=>0];
-
 
   $post = $gump->sanitize($_POST);
   $files = $_FILES;
@@ -53,7 +52,7 @@
   // send confirmation mail to user
   // send mail with collected data
 
-  $domain = 'softwear.it';
+  $domain = 'htttp://softwear.it/';
   // $operatorEmail = 'softwearit@connectis.pl';
   $operatorEmail = 'sobolczyk.robert@gmail.com';
   $fileUrl = $domain . $newFileName;
@@ -69,7 +68,8 @@
            Email: ' . $post['email'] . '<br>
            Zgoda: ' . $post['agreement'] . '<br>
   </p>';
-  $mai2 = sendEmail($operatorEmail, "Dane zgłoszeniowe uczestnika akcji", $html);
+
+  $mail2 = sendEmail($operatorEmail, "Dane zgłoszeniowe uczestnika akcji", $html);
 
 
   if($mail && $mail2){
@@ -102,27 +102,24 @@
 
   function sendEmail($to, $topic, $html){
 
+    $vFrom = 'do-not-reply@softwear.it';
+    $fromName = 'Soft Wear It';
+    $apiKey = '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';
 
-     $mail = new PHPMailer();
-     $mail->IsSMTP();
-     $mail->Mailer = "smtp";
-     $mail->Host = "connectis.nazwa.it";
-     $mail->Port = "2525";
-     $mail->SMTPAuth = true;
-     $mail->SMTPSecure = 'tls';
-     $mail->Username = "do-not-reply@softwear.it";
-     $mail->Password = "zoe6PDgA";
-    
 
-    $mail->setFrom('do-not-reply@softwear.it', 'Soft Wear It');
-    $mail->addAddress($to);
-    $mail->Subject = $topic;
-    $mail->msgHTML($html);
-    $mail->send();
+    $from = new SendGrid\Email(null, $vFrom);
+    $subject = $topic;
+    $to = new SendGrid\Email(null, $to);
+    $content = new SendGrid\Content("text/html", $html);
+    $mail = new SendGrid\Mail($from, $topic, $to, $content);
 
-    if($mail->send()){
+    $sg = new \SendGrid($apiKey);
+    $response = $sg->client->mail()->send()->post($mail);
+    if($response->statusCode() == "202"){
       return true;
     }
+
+
 
   }
 

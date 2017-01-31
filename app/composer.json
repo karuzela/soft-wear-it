@@ -1,0 +1,12 @@
+{
+    "name": "robertsobolczyk/app",
+    "authors": [
+        {
+            "name": "Robert Sobolczyk",
+            "email": "sobolczyk.robert@gmail.com"
+        }
+    ],
+     "require": {
+    "sendgrid/sendgrid": "~5.1"
+  }
+}
