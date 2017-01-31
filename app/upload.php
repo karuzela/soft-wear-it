@@ -54,7 +54,7 @@
 
   $domain = 'htttp://softwear.it/';
   // $operatorEmail = 'softwearit@connectis.pl';
-  $operatorEmail = 'sobolczyk.robert@gmail.com';
+  $operatorEmail = 'do-not-reply@softwear.it';
   $fileUrl = $domain . $newFileName;
 
 
