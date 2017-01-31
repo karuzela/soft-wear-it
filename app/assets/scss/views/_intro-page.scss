@@ -9,6 +9,9 @@
   @include r(phone-max) {
     padding: 0;
   }
+  @media screen and (max-height: 600px) {
+    height: 600px;
+  }
 }
 
 .intro-page__additional-background {
@@ -17,6 +20,7 @@
   background-position: bottom center; 
   background-size: contain;
   height: inherit;
+  position: relative;
   @include r(phone-max) {
     background-image: none;
   }
@@ -52,7 +56,7 @@
     }
     @include r(large-screen-min) {
       font-size: 3rem;
-      padding-top: 1rem;
+      padding-top: 1.8rem;
     }
     span {
       color: $green;
@@ -79,6 +83,9 @@
     right: -110px;
     @include r(tablet-max) {
       right: -1%;
+    }
+    @include r(large-screen-min) {
+      right: -350px;
     }
     span {
       font-size: 1.3rem;
@@ -119,7 +126,6 @@
 }
 
 .content__copy-container {
-  margin-top: -60px;
   @include r(phone-max) {
     margin-top: 80px;
   }
@@ -169,6 +175,9 @@
         font-size: 2.3rem;
         color: #1a1a1a;
       }
+    }
+    .instruction__number1 {
+      top: 13px;
     }
     .instruction__number2 {
       top: 11px;

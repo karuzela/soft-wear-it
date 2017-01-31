@@ -33,13 +33,16 @@
 }
 
 .main-page__header.designers {
-  margin: 10% 0 -15% 0;
+  margin: 10% 0 -120px 0;
   padding: 0;
-  @include r(phone-max) {
-    margin: 10% 0 0 0;
+  @include r(large-screen-min) {
+    margin-bottom: -15%;
   }
   @include r(tablet-max) {
-    margin-bottom: -10%;
+    margin-bottom: -90px;
+  }
+  @include r(phone-max) {
+    margin: 10% 0 0 0;
   }
 }
 
@@ -227,7 +230,7 @@
 .miskacz__copy {
   margin-top: 50%;
   @include r(phone-max) {
-    margin-top: 25%;
+    margin-top: 10%;
   }
 }
 
