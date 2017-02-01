@@ -103,7 +103,7 @@
 
     $vFrom = 'do-not-reply@softwear.it';
     $fromName = 'Soft Wear It';
-    $apiKey = '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';
+    $apiKey = '';
 
 
     $from = new SendGrid\Email(null, $vFrom);
